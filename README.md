@@ -1,5 +1,17 @@
 
+[230926]
+* 코드 이해 하기
+* turtle_230926v1.3
+
+*   data_2309260125.xlsx
+![image](https://github.com/KevinFire2030/251231/assets/109524169/2f040d74-f344-4379-8f0e-66b4cfd298ff)
+
+
 [230925]
+
+
+
+
 * turtle w/ SPY vs SPY
 * 일/시간/분 데이터 읽기
 
