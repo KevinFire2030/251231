@@ -145,6 +145,8 @@ class TurtleSystem:
                 self.data[t, 'S2_ExS'] = self.data[t]['Close'].rolling(
                     self.sys2_exit).max()
 
+        #self.data.to_excel('data_2309260125.xlsx')
+
     def _calc_N(self):
         # Calculates N for all tickers
         for t in self.tickers:
@@ -369,11 +371,11 @@ syms = df['Symbol']
 
 
 # Sample symbols
-tickers = list(np.random.choice(syms.values, size=10))
-#tickers = ["AAPL", "MSFT", "AMZN"]
+#tickers = list(np.random.choice(syms.values, size=10))
+tickers = ["AAPL", "MSFT", "AMZN"]
 print("Ticker Symbols:")
 _ = [print(f"\t{i}") for i in tickers]
-sys = TurtleSystem(tickers, init_account_size=1E4, start='2000-01-01')
+sys = TurtleSystem(tickers, init_account_size=1E4, start='2023-01-01')
 sys.run()
 
 port_values = sys.get_portfolio_values()
