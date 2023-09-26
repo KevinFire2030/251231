@@ -3,8 +3,34 @@
 * 코드 이해 하기
 * turtle_230926v1.3
 
+
+* position
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/6a67f669-bbff-413c-894a-c8dd60721c2f)
+  
+```python
+
+    def run(self):
+        # Runs backtest on the turtle strategy
+        self.portfolio = {}
+        position = {s:
+                        {t: None for t in self.tickers}
+                    for s in self.sys_list}
+
+```
+
+
+* N
+
+  ![image](https://github.com/KevinFire2030/251231/assets/109524169/6bf34929-b44c-4a39-b931-85afb0f4db82)
+
+
 *   data_2309260125.xlsx
 ![image](https://github.com/KevinFire2030/251231/assets/109524169/2f040d74-f344-4379-8f0e-66b4cfd298ff)
+
+
+
+
 
 
 [230925]
