@@ -112,6 +112,10 @@ class TurtleSystem:
         self._calc_breakouts()
         self._calc_N()
 
+        self.data = self.data.dropna()
+
+
+
     def _get_data(self):
         # Gets data for all tickers from YFinance
         yfObj = yf.Tickers(self.tickers)
@@ -119,6 +123,7 @@ class TurtleSystem:
         df = yfObj.history(start=self.start, end=self.end)
         df.drop(['Open', 'Dividends', 'Stock Splits', 'Volume'], inplace=True, axis=1)
         df.ffill(inplace=True)
+
         return df.swaplevel(axis=1)
 
     def _calc_breakouts(self):
@@ -144,6 +149,7 @@ class TurtleSystem:
                     self.sys2_entry).min()
                 self.data[t, 'S2_ExS'] = self.data[t]['Close'].rolling(
                     self.sys2_exit).max()
+
 
         #self.data.to_excel('data_2309260125.xlsx')
 
