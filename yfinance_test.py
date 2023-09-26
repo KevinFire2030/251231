@@ -74,6 +74,7 @@ df = df.swaplevel(axis=1)
 #df.to_excel('data6.xlsx')
 """
 
+"""
 tickers = ["NQ=F", "ES=F"]
 
 #appl = yf.Ticker("APPL")
@@ -104,5 +105,14 @@ df_3mo = yfObj.history(start="2023-01-20", end="2023-09-25", interval='3mo')
 #df = df.swaplevel(axis=1)
 
 #df.to_excel('data6.xlsx')
+
+"""
+
+tickers = ["NQ=F",""]
+
+
+yfObj = yf.Tickers(tickers)
+
+df_1d = yfObj.history(start="2023-09-20", end="2023-09-25", interval='1d')
 
 print("나는 25년 12월 25일 은퇴했다")
