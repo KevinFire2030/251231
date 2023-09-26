@@ -381,8 +381,10 @@ syms = df['Symbol']
 tickers = ["AAPL", "MSFT", "AMZN"]
 print("Ticker Symbols:")
 _ = [print(f"\t{i}") for i in tickers]
-sys = TurtleSystem(tickers, init_account_size=1E4, start='2023-01-01')
+sys = TurtleSystem(tickers, init_account_size=1E5, start='2023-01-01')
 sys.run()
+
+trans = sys.get_transactions()
 
 port_values = sys.get_portfolio_values()
 returns = port_values / port_values.shift(1)
@@ -397,6 +399,7 @@ sp500['returns'] = sp500['Close'] / sp500['Close'].shift(1)
 sp500['log_returns'] = np.log(sp500['returns'])
 sp500['cum_rets'] = sp500['log_returns'].cumsum()
 
+"""
 plt.figure(figsize=(12, 8))
 plt.plot((np.exp(cum_rets) -1 )* 100, label='Turtle Strategy')
 plt.plot((np.exp(sp500['cum_rets']) - 1) * 100, label='SPY')
@@ -406,6 +409,7 @@ plt.title('Cumulative Portfolio Returns')
 plt.legend()
 plt.tight_layout()
 plt.show()
+"""
 
 stats = getStratStats(log_returns)
 spy_stats = getStratStats(sp500['log_returns'])
