@@ -16,15 +16,117 @@
 * 개인연금, 퇴직연금, 퇴직금, 터틀 규칙으로 메뉴얼 투자하기, 진입/청산/손절 표 만들기
 * APPL/Close/High/Low 접근 (읽고/쓰기) 방법
 
+
+(230926v1.2)
+* 코드 따라 가기 run
+* nan 제거하기
+* enumerate
+* iterrows
+* print(f"{index=}, {row.age=}, {row['sex']=}")
+
+
+
+```
+
+for i, (index, row) in df.iterrows():
+    print(f"{i=}, {index=}, {row.age=}, {row['sex']=}")
+    
+Traceback (most recent call last):
+  File "C:\Program Files\JetBrains\PyCharm Community Edition 2022.3.2\plugins\python-ce\helpers\pydev\pydevconsole.py", line 364, in runcode
+    coro = func()
+  File "<input>", line 1, in <module>
+ValueError: too many values to unpack (expected 2)
+
+
+for i, (index, row) in enumerate(df.iterrows()):
+    print(f"{i=}, {index=}, {row.age=}, {row['sex']=}")  
+  
+    
+i=0, index=315, row.age='adults', row['sex']='women'
+i=1, index=1304, row.age='child', row['sex']='women'
+i=2, index=318, row.age='adults', row['sex']='women'
+i=3, index=342, row.age='adults', row['sex']='man'
+i=4, index=1260, row.age='child', row['sex']='man'
+
+
+```
+  
+
+```
+https://bio-info.tistory.com/149
+
+2) iterrows 행 반복
+for index, row in df.iterrows():
+    print(f"{index=}, {row.age=}, {row['sex']=}")
+* 코드 설명
+
+df.iterrows()를 사용하면 각 행별로 index와 row(시리즈 형태)를 반복합니다. index는 데이터프레임의 index값이고, row는 시리즈기 때문에 row.age처럼 점(.)을 통해 age 열에 접근할 수 있고, row['sex']처럼 리스트 형태로 sex 열에 접근할 수도 있습니다.
+```
+
+
+```
+https://www.daleseo.com/python-enumerate/
+[팁] 2차원 리스트 루프
+이제 enumerate() 함수의 작동 원리까지 배웠으니 좀 더 고급 응용 사례를 살펴볼까요?
+
+아래와 같은 2차원 리스트나 튜플이 담고 있는 데이터를 루프를 돌면서 접근해야한다고 가정해봅시다.
+
+>>> matrix = [['A', 'B', 'C'], ['D', 'E', 'F'], ['G', 'H', 'I']]
+이 때 일반적으로 다음과 같이 중첩 for 문 내에서 행과 열의 인덱스로 데이터를 읽도록 작성을 많이 하실 거에요.
+
+>>> for r in range(len(matrix)):
+...     for c in range(len(matrix[r])):
+...             print(r, c, matrix[r][c])
+...
+0 0 A
+0 1 B
+0 2 C
+1 0 D
+1 1 E
+1 2 F
+2 0 G
+2 1 H
+2 2 I
+동일한 작업을 하는 코드를 enumerate() 함수를 이용해서 재작성하면 어떨까요?
+
+>>> for r, row in enumerate(matrix):
+...     for c, letter in enumerate(row):
+...             print(r, c, letter)
+...
+0 0 A
+0 1 B
+0 2 C
+1 0 D
+1 1 E
+1 2 F
+2 0 G
+2 1 H
+2 2 I
+
+```
+  
+  
+
 (230926v1.1)
 * Tickers 에서 하나만 선택
+* 하나 이상, 아니면 KeyError
+
+  ```
+  
+tickers = ["NQ=F",""]
 
 
+yfObj = yf.Tickers(tickers)
+
+df_1d = yfObj.history(start="2023-09-20", end="2023-09-25", interval='1d')
+
+```
 
 
 [230926]
 * 코드 이해 하기
 * turtle_230926v1.3
+
 
 
 * position
