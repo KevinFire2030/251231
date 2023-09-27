@@ -15,15 +15,14 @@
 * 피라미딩 단위 0.5(=1/2) * N
 
 * 포트폴리오 수
-* 켈리의 공식
-
-
-
+![image](https://github.com/KevinFire2030/251231/assets/109524169/c0a91f13-61fb-4a5a-864f-c1fb70263625)
 
 
 * 켈리의 공식
 
 https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=bryankim1225&logNo=220550843446
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/83ce64b5-d816-4e65-9c6a-e1e0587cd61d)
 
 
 ![image](https://github.com/KevinFire2030/251231/assets/109524169/66e14ca9-430e-4252-a60a-e32acc24bd88)
