@@ -1,4 +1,203 @@
 
+[230927]
+* 리스크 관리 규칙과 코드 점검
+
+(turtle_230927v1.4)
+* 리스크 관리
+* 단위, 수량 점검
+* 포인트당 달러 가치 (틱벨류) 변수만 추가, 레버리지, 일단 추가만, 단위 크기 동작 이해하고 활용
+* 초기 cash 에 따라 결과가 달라지는 이유 (1E4, 1E5, 1E6)
+* breakout은 == 아니고 >= 혹은 <=
+* 가격이 왜 소수 4자리? 표시는 소주 2자리네 어쨌든
+* 변동성만 보면 가격이 비싼 놈의 변동성(ATR)과 싼 놈의 변동성이 같다고 볼수 없다
+* 따라서, 가격당 변동성, 다시말해 변동률이 필요하다
+* ATR_R = ART / Price
+* 피라미딩 단위 0.5(=1/2) * N
+
+* 선물
+
+  ![image](https://github.com/KevinFire2030/251231/assets/109524169/421e8d11-8dd8-4199-9385-a96dd18f2fb3)
+
+
+ ![image](https://github.com/KevinFire2030/251231/assets/109524169/50076e3d-2cb1-4332-b324-ff8b93420e5e)
+
+
+* 포트폴리오 수
+![image](https://github.com/KevinFire2030/251231/assets/109524169/c0a91f13-61fb-4a5a-864f-c1fb70263625)
+
+
+* 켈리의 공식
+
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=bryankim1225&logNo=220550843446
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/83ce64b5-d816-4e65-9c6a-e1e0587cd61d)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/66e14ca9-430e-4252-a60a-e32acc24bd88)
+
+켈리 공식 계산기
+https://fical.net/ko/%EC%BC%88%EB%A6%AC-%EA%B3%B5%EC%8B%9D-%EA%B3%84%EC%82%B0%EA%B8%B0
+
+
+
+```
+
+np.floor
+
+https://wikidocs.net/193711
+
+np.floor(), np.round(), np.ceil()
+np.floor() 함수는 주어진 숫자를 내림하여 정수로 반환하는 함수입니다. 즉, 소수점 이하를 버리고 정수 부분만 남깁니다.
+
+import numpy as np
+
+x = np.array([1.23, 4.56, 7.89])
+y = np.floor(x).astype(int)  # y = [1, 4, 7]
+반올림하는 함수는 np.round() 함수이며, 이 함수는 주어진 숫자를 반올림하여 정수 또는 소수점 이하 n자리까지 반올림하여 반환합니다. 예를 들어, np.round(3.141592, 2)는 소수점 이하 두 자리까지 반올림하여 3.14를 반환합니다.
+
+주어진 숫자를 무조건 올림하는 함수는 np.ceil() 함수입니다. np.ceil() 함수는 인수로 받은 숫자를 올림하여 반환합니다. 예를 들어, np.ceil(3.141592)는 4.0을 반환합니다.
+
+```
+
+
+
+* breakout은 == 아니고 >= 혹은 <=, 다시 보니 == 이거네
+![image](https://github.com/KevinFire2030/251231/assets/109524169/6b3968b9-12a1-4333-9a96-e73ba167fe88)
+
+
+ ![image](https://github.com/KevinFire2030/251231/assets/109524169/4b9fa383-6832-428c-a5f6-390052450491)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/17e2aff8-eccb-4186-9d0d-2fefd81425c3)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/cb30209a-1b3b-4d61-bfb9-0ded0f4eb461)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/3b57ce4e-ff51-45bc-85cc-3c79f68138cd)
+
+
+deepcopy
+![image](https://github.com/KevinFire2030/251231/assets/109524169/5da4639e-04fd-44d4-90ba-9f7083346f12)
+
+
+마소
+![image](https://github.com/KevinFire2030/251231/assets/109524169/fe882e95-f297-4f04-91fb-74d1ef69bfe5)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/daed6513-d561-45f6-9a62-ae5eea9e43d8)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/dfc5cec0-5360-4f07-b7dc-45abeeb4297d)
+
+
+```py
+
+    def _run_system(self, ticker, data, position, system=1):
+        S = system  # System number
+        price = data['Close']
+        if np.isnan(price):
+            # Return current position in case of missing data
+            return position
+        N = data['N']
+        dollar_units = self._get_units(S)
+        shares = 0
+        if position is None:
+            if price >= data[f'S{S}_EL']:  # Buy on breakout
+                if S == 1 and self.last_s1_win[ticker]:
+                    self.last_s1_win[ticker] = False
+                    return None
+                shares = self._size_position(data, dollar_units)
+                stop_price = price - self.risk_level * N
+                long = True
+            elif self.shorts:
+                if price <= data[f'S{S}_ES']:  # Sell short
+                    if S == 1 and self.last_s1_win[ticker]:
+                        self.last_s1_win[ticker] = False
+                        return None
+                    shares = self._size_position(data, dollar_units)
+                    stop_price = price + self.risk_level * N
+                    long = False
+            else:
+                return None
+            if shares == 0:
+                return None
+            # Ensure we have enough cash to trade
+            shares = self._check_cash_balance(shares, price)
+            value = price * shares
+
+            self.cash -= value
+            position = {'units': 1,
+                        'shares': shares,
+                        'entry_price': price,
+                        'stop_price': stop_price,
+                        'entry_N': N,
+                        'value': value,
+                        'long': long}
+            if np.isnan(self.cash) or self.cash < 0:
+                raise ValueError(f"Cash Error\n{S}-{ticker}\n{data}\n{position}")
+
+        else:
+            if position['long']:
+                # Check to exit existing long position
+                if price <= data[f'S{S}_ExL'] or price <= position['stop_price']:
+                    self.cash += position['shares'] * price
+                    if price >= position['entry_price']:
+                        self.last_s1_win[ticker] = True
+                    else:
+                        self.last_s1_win[ticker] = False
+                    position = None
+                # Check to pyramid existing position
+                elif position['units'] < self.unit_limit:
+                    if price >= position['entry_price'] + position['entry_N']:
+                        shares = self._size_position(data, dollar_units)
+                        shares = self._check_cash_balance(shares, price)
+                        self.cash -= shares * price
+                        stop_price = price - self.risk_level * N
+                        avg_price = (position['entry_price'] * position['shares'] +
+                                     shares * price) / (position['shares'] + shares)
+                        position['entry_price'] = avg_price
+                        position['shares'] += shares
+                        position['stop_price'] = stop_price
+                        position['units'] += 1
+            else:
+                # Check to exit existing short position
+                if price >= data[f'S{S}_ExS'] or price >= position['stop_price']:
+                    self.cash += position['shares'] * price
+                    if S == 1:
+                        if price <= position['entry_price']:
+                            self.last_s1_win[ticker] = True
+                        else:
+                            self.last_s1_win[ticker] = False
+                    position = None
+                # Check to pyramid existing position
+                elif position['units'] < self.unit_limit:
+                    if price <= position['entry_price'] - position['entry_N']:
+                        shares = self._size_position(data, dollar_units)
+                        shares = self._check_cash_balance(shares, price)
+                        self.cash -= shares * price
+                        stop_price = price + self.risk_level * N
+                        avg_price = (position['entry_price'] * position['shares'] +
+                                     shares * price) / (position['shares'] + shares)
+                        position['entry_price'] = avg_price
+                        position['shares'] += shares
+                        position['stop_price'] = stop_price
+                        position['units'] += 1
+
+            if position is not None:
+                # Update value at each time step
+                position['value'] = position['shares'] * price
+
+        return position
+
+
+```
+
+
+
+```
+f-string 포맷팅
+if price == data[f'S{S}_ES']:  # Sell short
+```
+
 [230926]
 * 다양성, 단순성, 일관성, 겸손
 * 다양성, 시장 선택시 일정 조건을 만족하는 것 중에서 랜덤하게 선택하기
@@ -16,6 +215,12 @@
 * 개인연금, 퇴직연금, 퇴직금, 터틀 규칙으로 메뉴얼 투자하기, 진입/청산/손절 표 만들기
 * APPL/Close/High/Low 접근 (읽고/쓰기) 방법
 
+(turtle_230927v1.4)
+* 리스크 관리
+* 단위, 수량 점검
+
+  
+
 
 (230926v1.2)
 * 코드 따라 가기 run
@@ -23,7 +228,35 @@
 * enumerate
 * iterrows
 * print(f"{index=}, {row.age=}, {row['sex']=}")
+* deepcopy
+* np.log
 
+
+
+
+
+```
+3. f-string 포맷팅 _ 직관적으로 알 수 있다
+something = '볼펜'
+EA = 2
+one_length = 5.343
+scale = 'cm'
+
+print(f'{something} {EA}개의 길이는 {one_length*EA}{scale} 입니다.')
+print(f'{something} {EA}개의 길이는 {one_length*EA:.1f}{scale} 입니다.')
+
+
+for i, (index, row) in enumerate(df.iterrows()):
+    print(f"{i}, {index}, {row.age}, {row['sex']}")    
+    
+0, 315, adults, women
+1, 1304, child, women
+2, 318, adults, women
+3, 342, adults, man
+4, 1260, child, man
+
+
+```
 
 
 ```
