@@ -14,6 +14,48 @@
 * ATR_R = ART / Price
 * 피라미딩 단위 0.5(=1/2) * N
 
+* 포트폴리오 수
+* 켈리의 공식
+
+
+```
+
+* 켈리의 공식
+
+https://m.blog.naver.com/PostView.naver?isHttpsRedirect=true&blogId=bryankim1225&logNo=220550843446
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/66e14ca9-430e-4252-a60a-e32acc24bd88)
+
+
+켈리 공식 계산기
+https://fical.net/ko/%EC%BC%88%EB%A6%AC-%EA%B3%B5%EC%8B%9D-%EA%B3%84%EC%82%B0%EA%B8%B0
+
+```
+
+```
+
+np.floor
+
+https://wikidocs.net/193711
+
+np.floor(), np.round(), np.ceil()
+np.floor() 함수는 주어진 숫자를 내림하여 정수로 반환하는 함수입니다. 즉, 소수점 이하를 버리고 정수 부분만 남깁니다.
+
+import numpy as np
+
+x = np.array([1.23, 4.56, 7.89])
+y = np.floor(x).astype(int)  # y = [1, 4, 7]
+반올림하는 함수는 np.round() 함수이며, 이 함수는 주어진 숫자를 반올림하여 정수 또는 소수점 이하 n자리까지 반올림하여 반환합니다. 예를 들어, np.round(3.141592, 2)는 소수점 이하 두 자리까지 반올림하여 3.14를 반환합니다.
+
+주어진 숫자를 무조건 올림하는 함수는 np.ceil() 함수입니다. np.ceil() 함수는 인수로 받은 숫자를 올림하여 반환합니다. 예를 들어, np.ceil(3.141592)는 4.0을 반환합니다.
+
+```
+
+
+
+* breakout은 == 아니고 >= 혹은 <=, 다시 보니 == 이거네
+![image](https://github.com/KevinFire2030/251231/assets/109524169/6b3968b9-12a1-4333-9a96-e73ba167fe88)
+
 
  ![image](https://github.com/KevinFire2030/251231/assets/109524169/4b9fa383-6832-428c-a5f6-390052450491)
 
@@ -23,6 +65,7 @@
 
 ![image](https://github.com/KevinFire2030/251231/assets/109524169/cb30209a-1b3b-4d61-bfb9-0ded0f4eb461)
 
+![image](https://github.com/KevinFire2030/251231/assets/109524169/3b57ce4e-ff51-45bc-85cc-3c79f68138cd)
 
 
 deepcopy
