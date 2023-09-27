@@ -16,6 +16,12 @@
 * 개인연금, 퇴직연금, 퇴직금, 터틀 규칙으로 메뉴얼 투자하기, 진입/청산/손절 표 만들기
 * APPL/Close/High/Low 접근 (읽고/쓰기) 방법
 
+(turtle_230927v1.4)
+* 리스크 관리
+* 단위, 수량 점검
+
+  
+
 
 (230926v1.2)
 * 코드 따라 가기 run
@@ -23,7 +29,35 @@
 * enumerate
 * iterrows
 * print(f"{index=}, {row.age=}, {row['sex']=}")
+* deepcopy
+* np.log
 
+
+
+
+
+```
+3. f-string 포맷팅 _ 직관적으로 알 수 있다
+something = '볼펜'
+EA = 2
+one_length = 5.343
+scale = 'cm'
+
+print(f'{something} {EA}개의 길이는 {one_length*EA}{scale} 입니다.')
+print(f'{something} {EA}개의 길이는 {one_length*EA:.1f}{scale} 입니다.')
+
+
+for i, (index, row) in enumerate(df.iterrows()):
+    print(f"{i}, {index}, {row.age}, {row['sex']}")    
+    
+0, 315, adults, women
+1, 1304, child, women
+2, 318, adults, women
+3, 342, adults, man
+4, 1260, child, man
+
+
+```
 
 
 ```
