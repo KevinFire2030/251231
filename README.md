@@ -5,9 +5,38 @@
 (turtle_230927v1.4)
 * 리스크 관리
 * 단위, 수량 점검
-* 포인트당 달러 가치 (틱벨류) 변수 추가, 레버리지
+* 포인트당 달러 가치 (틱벨류) 변수만 추가, 레버리지, 일단 추가만, 단위 크기 동작 이해하고 활용
 * 초기 cash 에 따라 결과가 달라지는 이유 (1E4, 1E5, 1E6)
 * breakout은 == 아니고 >= 혹은 <=
+* 가격이 왜 소수 4자리? 표시는 소주 2자리네 어쨌든
+* 변동성만 보면 가격이 비싼 놈의 변동성(ATR)과 싼 놈의 변동성이 같다고 볼수 없다
+* 따라서, 가격당 변동성, 다시말해 변동률이 필요하다
+* ATR_R = ART / Price
+* 피라미딩 단위 0.5(=1/2) * N
+
+
+ ![image](https://github.com/KevinFire2030/251231/assets/109524169/4b9fa383-6832-428c-a5f6-390052450491)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/17e2aff8-eccb-4186-9d0d-2fefd81425c3)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/cb30209a-1b3b-4d61-bfb9-0ded0f4eb461)
+
+
+
+deepcopy
+![image](https://github.com/KevinFire2030/251231/assets/109524169/5da4639e-04fd-44d4-90ba-9f7083346f12)
+
+
+마소
+![image](https://github.com/KevinFire2030/251231/assets/109524169/fe882e95-f297-4f04-91fb-74d1ef69bfe5)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/daed6513-d561-45f6-9a62-ae5eea9e43d8)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/dfc5cec0-5360-4f07-b7dc-45abeeb4297d)
+
 
 ```py
 
