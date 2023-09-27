@@ -14,6 +14,14 @@
 * ATR_R = ART / Price
 * 피라미딩 단위 0.5(=1/2) * N
 
+* 선물
+
+  ![image](https://github.com/KevinFire2030/251231/assets/109524169/421e8d11-8dd8-4199-9385-a96dd18f2fb3)
+
+
+ ![image](https://github.com/KevinFire2030/251231/assets/109524169/50076e3d-2cb1-4332-b324-ff8b93420e5e)
+
+
 * 포트폴리오 수
 ![image](https://github.com/KevinFire2030/251231/assets/109524169/c0a91f13-61fb-4a5a-864f-c1fb70263625)
 
