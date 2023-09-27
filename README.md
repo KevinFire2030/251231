@@ -1,4 +1,123 @@
 
+[230927]
+* 리스크 관리 규칙과 코드 점검
+
+(turtle_230927v1.4)
+* 리스크 관리
+* 단위, 수량 점검
+* 포인트당 달러 가치 (틱벨류) 변수 추가, 레버리지
+* 초기 cash 에 따라 결과가 달라지는 이유 (1E4, 1E5, 1E6)
+* breakout은 == 아니고 >= 혹은 <=
+
+```py
+
+    def _run_system(self, ticker, data, position, system=1):
+        S = system  # System number
+        price = data['Close']
+        if np.isnan(price):
+            # Return current position in case of missing data
+            return position
+        N = data['N']
+        dollar_units = self._get_units(S)
+        shares = 0
+        if position is None:
+            if price >= data[f'S{S}_EL']:  # Buy on breakout
+                if S == 1 and self.last_s1_win[ticker]:
+                    self.last_s1_win[ticker] = False
+                    return None
+                shares = self._size_position(data, dollar_units)
+                stop_price = price - self.risk_level * N
+                long = True
+            elif self.shorts:
+                if price <= data[f'S{S}_ES']:  # Sell short
+                    if S == 1 and self.last_s1_win[ticker]:
+                        self.last_s1_win[ticker] = False
+                        return None
+                    shares = self._size_position(data, dollar_units)
+                    stop_price = price + self.risk_level * N
+                    long = False
+            else:
+                return None
+            if shares == 0:
+                return None
+            # Ensure we have enough cash to trade
+            shares = self._check_cash_balance(shares, price)
+            value = price * shares
+
+            self.cash -= value
+            position = {'units': 1,
+                        'shares': shares,
+                        'entry_price': price,
+                        'stop_price': stop_price,
+                        'entry_N': N,
+                        'value': value,
+                        'long': long}
+            if np.isnan(self.cash) or self.cash < 0:
+                raise ValueError(f"Cash Error\n{S}-{ticker}\n{data}\n{position}")
+
+        else:
+            if position['long']:
+                # Check to exit existing long position
+                if price <= data[f'S{S}_ExL'] or price <= position['stop_price']:
+                    self.cash += position['shares'] * price
+                    if price >= position['entry_price']:
+                        self.last_s1_win[ticker] = True
+                    else:
+                        self.last_s1_win[ticker] = False
+                    position = None
+                # Check to pyramid existing position
+                elif position['units'] < self.unit_limit:
+                    if price >= position['entry_price'] + position['entry_N']:
+                        shares = self._size_position(data, dollar_units)
+                        shares = self._check_cash_balance(shares, price)
+                        self.cash -= shares * price
+                        stop_price = price - self.risk_level * N
+                        avg_price = (position['entry_price'] * position['shares'] +
+                                     shares * price) / (position['shares'] + shares)
+                        position['entry_price'] = avg_price
+                        position['shares'] += shares
+                        position['stop_price'] = stop_price
+                        position['units'] += 1
+            else:
+                # Check to exit existing short position
+                if price >= data[f'S{S}_ExS'] or price >= position['stop_price']:
+                    self.cash += position['shares'] * price
+                    if S == 1:
+                        if price <= position['entry_price']:
+                            self.last_s1_win[ticker] = True
+                        else:
+                            self.last_s1_win[ticker] = False
+                    position = None
+                # Check to pyramid existing position
+                elif position['units'] < self.unit_limit:
+                    if price <= position['entry_price'] - position['entry_N']:
+                        shares = self._size_position(data, dollar_units)
+                        shares = self._check_cash_balance(shares, price)
+                        self.cash -= shares * price
+                        stop_price = price + self.risk_level * N
+                        avg_price = (position['entry_price'] * position['shares'] +
+                                     shares * price) / (position['shares'] + shares)
+                        position['entry_price'] = avg_price
+                        position['shares'] += shares
+                        position['stop_price'] = stop_price
+                        position['units'] += 1
+
+            if position is not None:
+                # Update value at each time step
+                position['value'] = position['shares'] * price
+
+        return position
+
+
+```
+
+
+
+```
+f-string 포맷팅
+if price == data[f'S{S}_ES']:  # Sell short
+```
+
 [230926]
 * 다양성, 단순성, 일관성, 겸손
 * 다양성, 시장 선택시 일정 조건을 만족하는 것 중에서 랜덤하게 선택하기
