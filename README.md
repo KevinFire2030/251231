@@ -1,3 +1,34 @@
+[231002]
+* 포지션 크기 결정
+* 마크다운 다시 보기
+* 유닛 크기, 1회당 투자금액이 아닌 1회당 손실 크기 결과 정리
+* 통계, F, 승률, 손실대비이익 비율, 총 거래횟수, 이익거래 횟수, 손실거래 횟수
+* 월별 수익률, 연간 수익률, 피벗
+* 티커 하나일때 get_data, 시간봉, 분봉
+* 시스템 vs Buy&Hold 비교
+* 변동성 이해하기, TQQQ/SQQQ vs QQQ vs NQ vs NQ=F, 변동성 x 포인트당 달러가치
+* 코스닥200 선물 데이터 읽기
+* unit_limit=5, 자동으로 계산하기
+* self.sys_list = ['S1', 'S2'] , S2에 다른 전략(삼중창) 구현하기, 시스템수 늘리기 S3 = 볼린저 벤드
+
+  
+(turtle_230927v1.5)  
+
+* 백테스팅 결과
+1. 시장 선택: 주식, 3종목 (APPL, MSFT, AMZN)
+2. 기간: 2000.01.01 ~ 2023.09.26
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/9875f6a6-a98e-480d-98c3-24f5b6c48309)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/6983a667-2533-4b00-a8a0-e9b57ff0dcf1)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/1f3030f4-bd7c-439c-980f-d0528e515bda)
+ 
+![image](https://github.com/KevinFire2030/251231/assets/109524169/702db17e-bb03-4114-9eb4-f11178d21f3d)
+
+
 
 [230927]
 * 리스크 관리 규칙과 코드 점검
