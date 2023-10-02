@@ -14,11 +14,21 @@
 * backtesting.py로 돌리기
 * backtesting.py 통계자료 포멧
 
+
+
 (turtle_231002v1.6)  
 * 승률, 총 거래 횟수, 손실 횟수, 이익 횟수
 * 수익/손실률, 캘리의 법칙 VS 2n 손절
 * 액셀 피벗으로 월별 손익률 구하기
 * * backtesting.py 통계자료 포멧
+ 
+(backtesting.py)
+https://kernc.github.io/backtesting.py/
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/f44c4b4f-0753-4608-ba71-4aedd5fac065)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/4119d7d3-294a-4ac0-b54b-c4886fc6f550)
+
   
 (turtle_231002v1.5)  
 
