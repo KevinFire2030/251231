@@ -1,3 +1,12 @@
+
+[231003]
+* yfinance data 엑셀 파일로 저장, 읽고 쓰기, 파일 이름 규칙 정하기
+* 파이썬으로 데이터 가공이 어렵다면 엑셀로 데이터 가공, 예) ticker 하나만 읽어오기
+* 강환국, 할수 있다! 퀀트 투자, 생각에 관한 생각
+* 제시리버모어의 회상
+* tutle vs turtle_231002v1.6 성과 비교
+
+
 [231002]
 * 포지션 크기 결정
 * 마크다운 다시 보기
@@ -7,16 +16,35 @@
 * 티커 하나일때 get_data, 시간봉, 분봉
 * 시스템 vs Buy&Hold 비교
 * 변동성 이해하기, TQQQ/SQQQ vs QQQ vs NQ vs NQ=F, 변동성 x 포인트당 달러가치
+* 변동성 이해하기, 시초가 갭상승, 갭하락, 특히 코스피200, 나스닥100 비는 1시간
 * 코스닥200 선물 데이터 읽기
-* unit_limit=5, 자동으로 계산하기
+* unit_limit=5, 자동으로 계산하기, 선물 증거금, 나스닥100, 코스피200
 * self.sys_list = ['S1', 'S2'] , S2에 다른 전략(삼중창) 구현하기, 시스템수 늘리기 S3 = 볼린저 벤드
+* backtesting.py로 돌리기
+* backtesting.py 통계자료 포멧
+
+
+
+(turtle_231002v1.6)  
+* 승률, 총 거래 횟수, 손실 횟수, 이익 횟수
+* 수익/손실률, 캘리의 법칙 VS 2n 손절
+* 액셀 피벗으로 월별 손익률 구하기
+* * backtesting.py 통계자료 포멧
+ 
+(backtesting.py)
+https://kernc.github.io/backtesting.py/
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/f44c4b4f-0753-4608-ba71-4aedd5fac065)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/4119d7d3-294a-4ac0-b54b-c4886fc6f550)
 
   
-(turtle_230927v1.5)  
+(turtle_231002v1.5)  
 
 * 백테스팅 결과
 1. 시장 선택: 주식, 3종목 (APPL, MSFT, AMZN)
 2. 기간: 2000.01.01 ~ 2023.09.26
+3. 유닛 크기를 투자금에서 리스크로 변경 (계정의 1%, 투자금 VS 리스크)
 
 ![image](https://github.com/KevinFire2030/251231/assets/109524169/9875f6a6-a98e-480d-98c3-24f5b6c48309)
 
