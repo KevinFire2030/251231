@@ -115,4 +115,4 @@ yfObj = yf.Tickers(tickers)
 
 df_1d = yfObj.history(start="2023-09-20", end="2023-09-25", interval='1d')
 
-print("나는 25년 12월 25일 은퇴했다")
+print("나는 25년 12월 31일 은퇴했다")
