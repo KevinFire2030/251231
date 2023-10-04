@@ -5,6 +5,49 @@
 * 강환국, 할수 있다! 퀀트 투자, 생각에 관한 생각
 * 제시리버모어의 회상
 * tutle vs turtle_231002v1.6 성과 비교
+* trend 컬럼 추가, 1,0,-1, 삼중창 시스템 응용
+* SPY vs SPY 터틀, ticker =1, 엑셀 vs 코딩
+* unit_limit, 선물의 경우, 증거금으로 계산
+* MDD 기간도 같이 표시, 초기인지 판단하기 위해
+
+
+(SPY vs SPY 터틀, ticker =1, 엑셀 vs 코딩)
+* turtle_231004v1.7
+* 1d, 1m, max
+
+* SPY 컬럼 추가
+
+* yfObj = yf.Tickers(tickers), QQQ 삭제 
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/717d1ed2-eb1f-44d3-90d6-cc247672314f)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/5af04196-4e63-4040-8d11-85650ea9b606)
+
+
+
+(tutle vs turtle_231002v1.6 성과 비교)  
+* 리스크 크기__turtle_231002v1.5 vs 투자금액_turtle_231002v1.6
+
+```py
+
+    def _size_position(self, data, dollar_units):
+
+        #self.dollars_per_point
+        shares = np.floor(dollar_units / (
+                self.risk_level * data['N'] * data['Close']))
+
+        #shares = np.floor(dollar_units / (
+        #        self.risk_level * data['N'] * self.dollars_per_point))
+
+        return shares
+```
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/35b8f2f1-93ee-410d-99e7-f7bfd584aab6)
+
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       2.8189          0.0587  ...        0.6895                   1790
+SPY          3.5854          0.0664  ...        0.5519                   2406
 
 
 [231002]
