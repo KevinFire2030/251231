@@ -1,0 +1,1614 @@
+D:\Anaconda3\envs\py39_32\python.exe "C:/Program Files/JetBrains/PyCharm Community Edition 2022.3.2/plugins/python-ce/helpers/pydev/pydevd.py" --multiprocess --qt-support=auto --client 127.0.0.1 --port 58454 --file D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py 
+Connected to pydev debugger (build 223.8617.48)
+Ticker Symbols:
+	AVY
+	IVZ
+	KLAC
+	DFS
+	AEE
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       1.6753          0.0424  ...        0.8102                   5990
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	SPGI
+	MCK
+	TJX
+	GS
+	PM
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      10.8757          0.1101  ...        0.5825                   1982
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ANET
+	BG
+	DOV
+	ICE
+	ULTA
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       7.2433          0.0931  ...        0.6474                   2101
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	SRE
+	AME
+	MDLZ
+	FFIV
+	DHR
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       4.1516          0.0717  ...        0.4930                   3899
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	WMB
+	WRK
+	BALL
+	PEAK
+	CRM
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      15.7782          0.1264  ...        0.4335                   1043
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	STX
+	CPB
+	WHR
+	AON
+	SLB
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      14.0215          0.1212  ...        0.6596                   1571
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	SPG
+	STT
+	IR
+	ZION
+	LNT
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       1.4634          0.0388  ...        0.5844                   2895
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	PNC
+	EMR
+	PFG
+	INCY
+	GILD
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       6.0251          0.0858  ...        0.5337                   1780
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	PH
+	IFF
+	PCAR
+	BAX
+	EMN
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      10.5156          0.1087  ...        0.5304                   1810
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	REGN
+	ZION
+	ETSY
+	GNRC
+	MRNA
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       6.6435          0.0897  ...        0.6092                   1892
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	SNPS
+	ROP
+	BXP
+	TJX
+	DOW
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      26.1638          0.1496  ...        0.4299                    887
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ZTS
+	CBRE
+	BG
+	CI
+	BK
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       2.6477          0.0562  ...        0.7366                   4087
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	PSA
+	AME
+	RVTY
+	VRSK
+	NOC
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      15.1389          0.1246  ...        0.5362                   1582
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	TYL
+	FOXA
+	COO
+	AZO
+	VZ
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      17.5568          0.1312  ...        0.4681                   2380
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	SBUX
+	DLTR
+	FRT
+	WY
+	K
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       5.3639          0.0813  ...        0.5443                   1855
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	MO
+	IR
+	PCG
+	APTV
+	HST
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      10.8553          0.1100  ...        0.6871                   1641
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	VMC
+	GRMN
+	MET
+	ADBE
+	CPT
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      14.2564          0.1219  ...        0.5966                   3738
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	CLX
+	MNST
+	ETR
+	CMG
+	PANW
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      46.9378          0.1775  ...        0.4148                   1364
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	KDP
+	PKG
+	CPB
+	ANET
+	BX
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      25.4918          0.1484  ...        0.4248                   1575
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	RF
+	CVX
+	AXP
+	OTIS
+	ED
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       4.2707          0.0727  ...        0.3578                   1394
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	LRCX
+	DFS
+	IRM
+	WRK
+	WDC
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       6.5937          0.0894  ...        0.5737                   2019
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	TRMB
+	SJM
+	DXCM
+	MDLZ
+	ADBE
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      15.0423          0.1243  ...        0.4449                   1765
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	CBOE
+	FFIV
+	TMO
+	GL
+	VRSN
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       5.6537          0.0833  ...        0.5535                   2370
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	CCL
+	MRNA
+	MA
+	HII
+	TRGP
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       5.5792          0.0828  ...        0.5095                    931
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ULTA
+	LH
+	MO
+	MMC
+	BBY
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      11.7425          0.1134  ...        0.4380                   1749
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	DLR
+	AOS
+	PAYC
+	RJF
+	TSCO
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      10.0257          0.1066  ...        0.4096                    909
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ETN
+	URI
+	MSFT
+	IQV
+	POOL
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      11.3204          0.1118  ...        0.6085                   1406
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	EXPE
+	ULTA
+	TXN
+	PGR
+	TDY
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      26.3565          0.1499  ...        0.6628                   1953
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	GNRC
+	KEYS
+	ENPH
+	DOV
+	MET
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      13.0124          0.1179  ...        0.4983                   1516
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	CI
+	NVR
+	SYY
+	AOS
+	ADSK
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       5.8788          0.0848  ...        0.6660                   2919
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	EXR
+	VRSN
+	MSCI
+	BK
+	UAL
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      12.7576          0.1170  ...        0.6641                   3573
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	WTW
+	BIO
+	GLW
+	IFF
+	FICO
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       3.1456          0.0619  ...        0.6304                   2142
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	CZR
+	APH
+	BF.B
+	UNH
+	CFG
+[*********************100%%**********************]  5 of 5 completed
+
+1 Failed download:
+['BF.B']: Exception('%ticker%: No price data found, symbol may be delisted (1d 2000-01-01 -> 2023-09-26)')
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       3.2119          0.0626  ...        0.4386                   2812
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	EOG
+	MLM
+	KMB
+	PHM
+	MPWR
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      28.2062          0.1531  ...        0.4374                   1548
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	GOOG
+	MDLZ
+	EG
+	CTRA
+	SNA
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       7.4605          0.0943  ...        0.5237                   1526
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	APTV
+	WMB
+	FOXA
+	HWM
+	CVS
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       3.9859          0.0702  ...        0.5229                   1624
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	NTRS
+	CINF
+	A
+	BSX
+	ROP
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       3.3500          0.0640  ...        0.7143                   3167
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	AVB
+	DAL
+	STE
+	BAC
+	O
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       7.7450          0.0959  ...        0.4812                   2280
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	FDX
+	CPRT
+	HES
+	GPN
+	NRG
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      57.3359          0.1873  ...        0.4659                    634
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	TER
+	ACN
+	F
+	KO
+	SPGI
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       8.5852          0.1001  ...        0.6224                   2006
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	HRL
+	WBD
+	CPT
+	ARE
+	DHI
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      13.8422          0.1206  ...        0.3580                   1619
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	BR
+	SEDG
+	GPC
+	MOS
+	EW
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      10.1365          0.1071  ...        0.4213                   1058
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	LYB
+	GRMN
+	SBUX
+	ANSS
+	TROW
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       9.8273          0.1058  ...        0.6062                   1794
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	LH
+	ALL
+	FSLR
+	COR
+	CBRE
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       9.0705          0.1024  ...        0.5408                   1919
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	CL
+	KLAC
+	ALB
+	ZTS
+	ADI
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       9.0102          0.1021  ...        0.3790                   2354
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	EQT
+	EFX
+	ZION
+	KHC
+	HWM
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       0.0259          0.0011  ...        0.6756                   4281
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	MLM
+	CMI
+	FOXA
+	MTB
+	CE
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       4.5274          0.0749  ...        0.6244                   1212
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	FCX
+	HOLX
+	SBAC
+	CSCO
+	PLD
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      16.0662          0.1272  ...        0.5622                   1210
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ITW
+	MET
+	VTR
+	O
+	OGN
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       4.7261          0.0765  ...        0.5053                   1580
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	EFX
+	ELV
+	KMB
+	SYF
+	BKNG
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       4.2862          0.0728  ...        0.5580                   1947
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	PTC
+	CI
+	APTV
+	GIS
+	ZION
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       0.1843          0.0072  ...        0.7496                   6085
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ABNB
+	HWM
+	APH
+	ODFL
+	NTRS
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       3.3798          0.0643  ...        0.5425                   2094
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	PHM
+	GIS
+	IEX
+	HSIC
+	LEN
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      10.0053          0.1066  ...        0.5972                   3208
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	MPWR
+	ALGN
+	ORCL
+	IT
+	LRCX
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      18.3618          0.1333  ...        0.5957                   2040
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	NTAP
+	CAG
+	TAP
+	WBD
+	ABBV
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       4.6514          0.0759  ...        0.4928                   2236
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	WFC
+	CNP
+	PCAR
+	BRK.B
+	DLTR
+[*********************100%%**********************]  5 of 5 completed
+
+1 Failed download:
+['BRK.B']: Exception('%ticker%: No timezone found, symbol may be delisted')
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       3.5345          0.0659  ...        0.5768                   3103
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	WRK
+	STZ
+	TDY
+	SO
+	AIZ
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      13.1903          0.1185  ...        0.5000                   1348
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	GWW
+	MTB
+	NRG
+	VTR
+	KEY
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       4.6771          0.0761  ...        0.5883                   2062
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	HAS
+	RF
+	RHI
+	STT
+	ETN
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       3.4693          0.0653  ...        0.4562                   1608
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	EA
+	NWSA
+	WBD
+	CMA
+	SWK
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       3.8364          0.0688  ...        0.7034                   1861
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ZION
+	UDR
+	XEL
+	NOC
+	UDR
+[*********************100%%**********************]  4 of 4 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       4.9037          0.0778  ...        0.5755                   2437
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ALL
+	BK
+	MTCH
+	XOM
+	FDS
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       7.0287          0.0919  ...        0.3689                   1440
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	EFX
+	TSCO
+	GIS
+	PGR
+	ADM
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       3.7069          0.0676  ...        0.5408                   2185
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	MCD
+	SLB
+	TEL
+	TROW
+	INVH
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       5.0589          0.0790  ...        0.6139                   2306
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	CNC
+	XEL
+	LEN
+	DXCM
+	DLR
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       4.2889          0.0729  ...        0.5883                   3121
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ZBH
+	MSI
+	ABBV
+	IEX
+	GILD
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       6.4492          0.0885  ...        0.5914                   2406
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	PANW
+	EMN
+	SNPS
+	MCHP
+	PEP
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      16.4310          0.1283  ...        0.4614                   1169
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	NFLX
+	USB
+	TYL
+	CTAS
+	TECH
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      14.2742          0.1220  ...        0.4612                   1854
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	LMT
+	PKG
+	EQIX
+	NKE
+	DHI
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      19.8101          0.1367  ...        0.4289                    960
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ENPH
+	APD
+	MCK
+	TFC
+	TXN
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       7.1785          0.0928  ...        0.4618                   1095
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	AXON
+	PANW
+	WRB
+	MRO
+	STE
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      90.1471          0.2099  ...        0.4616                   1189
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	BWA
+	TMO
+	PG
+	ZION
+	MCD
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       5.2924          0.0807  ...        0.4950                   2294
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	CLX
+	WAB
+	SBUX
+	AAL
+	CE
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       0.4637          0.0162  ...        0.6345                   2707
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	GOOGL
+	AMGN
+	GIS
+	ULTA
+	CPB
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      24.1264          0.1458  ...        0.2653                    899
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	EVRG
+	EOG
+	PGR
+	AFL
+	PLD
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      20.0187          0.1372  ...        0.5840                   1071
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ZBH
+	LDOS
+	GILD
+	UAL
+	EMN
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       1.6409          0.0419  ...        0.6020                   1890
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	HAL
+	VTRS
+	AJG
+	MS
+	PLD
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       9.6644          0.1051  ...        0.4147                   2365
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	WBD
+	GEN
+	RTX
+	YUM
+	GILD
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      42.3412          0.1725  ...        0.2758                    520
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ODFL
+	REGN
+	CSX
+	OGN
+	GWW
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      13.2892          0.1188  ...        0.4296                   1179
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	CPRT
+	AON
+	KVUE
+	ADBE
+	USB
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       9.2167          0.1031  ...        0.4792                   1671
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	GRMN
+	GPN
+	KR
+	CRL
+	VRTX
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      10.5026          0.1086  ...        0.6046                   2919
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	WM
+	CMCSA
+	DLR
+	TDY
+	MA
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       9.2459          0.1032  ...        0.4514                   1912
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	FOX
+	MSFT
+	LIN
+	WTW
+	FANG
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       4.1138          0.0713  ...        0.4444                   2066
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	PPG
+	OGN
+	HRL
+	IP
+	CRM
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       6.3534          0.0879  ...        0.5259                   1399
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ADSK
+	EVRG
+	EQR
+	DHR
+	ES
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       4.5994          0.0754  ...        0.5489                   2240
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	TTWO
+	LVS
+	GM
+	ATO
+	BF.B
+[*********************100%%**********************]  5 of 5 completed
+
+1 Failed download:
+['BF.B']: Exception('%ticker%: No price data found, symbol may be delisted (1d 2000-01-01 -> 2023-09-26)')
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       8.0273          0.0973  ...        0.4769                   3871
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	CPT
+	LH
+	ELV
+	A
+	TSN
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       5.0764          0.0792  ...        0.6935                   5015
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	MAA
+	ALLE
+	LHX
+	QRVO
+	KMI
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       4.0698          0.0709  ...        0.4293                   2685
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	PKG
+	NRG
+	APTV
+	CMCSA
+	JNPR
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       5.6048          0.0830  ...        0.6240                   2377
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	ED
+	MPWR
+	JPM
+	TFC
+	LRCX
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       1.5301          0.0400  ...        0.4650                   3074
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	AMAT
+	T
+	AMT
+	IFF
+	TRV
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       0.8803          0.0270  ...        0.5800                   2482
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	AIG
+	EXC
+	GLW
+	LHX
+	CDNS
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       1.9466          0.0467  ...        0.7658                   4914
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	K
+	AFL
+	FDX
+	AMP
+	GM
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       5.9858          0.0855  ...        0.5591                   2036
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	SJM
+	FDX
+	FOX
+	CSX
+	PCAR
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       6.8997          0.0912  ...        0.4178                   2863
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	MRNA
+	ARE
+	MAA
+	KEY
+	SHW
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      20.6454          0.1386  ...        0.3905                    803
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	COO
+	INVH
+	JKHY
+	IT
+	SBUX
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       3.8498          0.0689  ...        0.5871                   3868
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	NRG
+	MCHP
+	WTW
+	DLR
+	DHI
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      13.0025          0.1179  ...        0.5257                   2449
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	MSCI
+	T
+	PLD
+	ORCL
+	MPC
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       3.3305          0.0638  ...        0.5296                   3081
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	WY
+	GE
+	MPC
+	SLB
+	FRT
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       3.3168          0.0637  ...        0.7555                   1978
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+Ticker Symbols:
+	HES
+	COF
+	GEHC
+	MOS
+	WYNN
+[*********************100%%**********************]  5 of 5 completed
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:275: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+D:\Fire2030\Git\251231\turtle_orginal_231008v1.9.py:252: RuntimeWarning: invalid value encountered in scalar divide
+  avg_price = (position['entry_price'] * position['shares'] +
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       0.0426          0.0018  ...        0.8738                   5752
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+[2 rows x 7 columns]
+나는 2025년 12월 31일 10억 자산과 월500만원 버는 시스템을 갖추고 은퇴했다
+
+Process finished with exit code 0
