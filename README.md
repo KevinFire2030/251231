@@ -4,6 +4,14 @@
 * https://raposa.trade/blog/testing-turtle-trading-the-system-that-made-newbie-traders-millions/
 
 
+(100회 테스트 결과)
+
+행 레이블	평균 : tot_returns
+SPY	3.5854
+Turtle	11.496062
+![image](https://github.com/KevinFire2030/251231/assets/109524169/803c1abc-25d7-478e-b224-17f77ed4330a)
+
+
 (toutle.py, price 제외)
 
 Ticker Symbols:
