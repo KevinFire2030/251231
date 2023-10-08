@@ -55,8 +55,8 @@ class TurtleSystem:
     def __init__(self, tickers, init_account_size=10000, risk_level=2, r_max=0.02,
                  sys1_entry=20, sys1_exit=10, sys2_entry=55, sys2_exit=20,
                  atr_periods=20, sys1_allocation=0.5, risk_reduction_rate=0.1,
-                 risk_reduction_level=0.2, unit_limit=5, pyramid_units=1.5,
-                 dollars_per_point = 1, start='2000-01-01', end='2023-09-26', shorts=True):
+                 risk_reduction_level=0.2, unit_limit=5, pyramid_units=1,
+                 start='2000-01-01', end='2023-09-26', shorts=True):
         '''
         :tickers: list of security symbols to trade.
         :init_account_size: int that sets initial trading capital
@@ -81,8 +81,6 @@ class TurtleSystem:
           sees before it reduces its trading size.
         :risk_reduction_level: float < 1 represents each increment in risk the
           the system reduces as it loses capital below its initial size.
-        : pyramid_units: 포지션 추가시 N 대비 증가 비율 (오리지널에서는 1/2 = 0.5 증가할때마다 포지션 추가)
-        :dollars_per_point: 포인트당 달러 가치 (예, 주식의 경우 1$, 나스닥100 $20)
         '''
         self.tickers = tickers
         self.init_account_size = init_account_size
@@ -105,39 +103,23 @@ class TurtleSystem:
         self.risk_reduction_level = risk_reduction_level
         self.risk_reduction_rate = risk_reduction_rate
         self.pyramid_units = pyramid_units
-        self.dollars_per_point = dollars_per_point
         self.sys_list = ['S1', 'S2']
 
         self._prep_data()
 
     def _prep_data(self):
         self.data = self._get_data()
-
-        self.data.drop(['QQQ'], inplace=True, axis=1)
-
         self._calc_breakouts()
         self._calc_N()
 
-        self.data = self.data.dropna()
-
-
-
     def _get_data(self):
         # Gets data for all tickers from YFinance
-
-        tickers = ["SPY", "QQQ"]
-
-        yfObj = yf.Tickers(tickers)
+        yfObj = yf.Tickers(self.tickers)
         #df = yfObj.history(start=self.start, end=self.end, interval='1h', back_adjust=True, auto_adjust=True, prepost=True)
         df = yfObj.history(start=self.start, end=self.end)
-        #df.drop(['Open', 'Dividends', 'Stock Splits', 'Volume'], inplace=True, axis=1)
+        df.drop(['Open', 'Dividends', 'Stock Splits', 'Volume'], inplace=True, axis=1)
         df.ffill(inplace=True)
-
         return df.swaplevel(axis=1)
-
-
-
-
 
     def _calc_breakouts(self):
         # Gets breakouts for all tickers
@@ -162,9 +144,6 @@ class TurtleSystem:
                     self.sys2_entry).min()
                 self.data[t, 'S2_ExS'] = self.data[t]['Close'].rolling(
                     self.sys2_exit).max()
-
-
-        #self.data.to_excel('data_2309260125.xlsx')
 
     def _calc_N(self):
         # Calculates N for all tickers
@@ -204,14 +183,9 @@ class TurtleSystem:
         return dollar_units
 
     def _size_position(self, data, dollar_units):
-
-        #self.dollars_per_point
-        #shares = np.floor(dollar_units / (
-        #        self.risk_level * data['N'] * data['Close']))
-
-        shares = np.floor(dollar_units / (
-                self.risk_level * data['N'] * self.dollars_per_point))
-
+       # shares = np.floor(dollar_units / (
+       #         self.risk_level * data['N'] * data['Close']))
+        shares = np.floor(dollar_units / (self.risk_level * data['N']))
         return shares
 
     def _run_system(self, ticker, data, position, system=1):
@@ -224,23 +198,19 @@ class TurtleSystem:
         dollar_units = self._get_units(S)
         shares = 0
         if position is None:
-            if price >= data[f'S{S}_EL']:  # Buy on breakout
+            if price == data[f'S{S}_EL']:  # Buy on breakout
                 if S == 1 and self.last_s1_win[ticker]:
                     self.last_s1_win[ticker] = False
                     return None
                 shares = self._size_position(data, dollar_units)
-                # Ensure we have enough cash to trade
-                shares = self._check_cash_balance(shares, price)
                 stop_price = price - self.risk_level * N
                 long = True
             elif self.shorts:
-                if price <= data[f'S{S}_ES']:  # Sell short
+                if price == data[f'S{S}_ES']:  # Sell short
                     if S == 1 and self.last_s1_win[ticker]:
                         self.last_s1_win[ticker] = False
                         return None
                     shares = self._size_position(data, dollar_units)
-                    # Ensure we have enough cash to trade
-                    shares = self._check_cash_balance(shares, price)
                     stop_price = price + self.risk_level * N
                     long = False
             else:
@@ -248,7 +218,7 @@ class TurtleSystem:
             if shares == 0:
                 return None
             # Ensure we have enough cash to trade
-            #shares = self._check_cash_balance(shares, price)
+            shares = self._check_cash_balance(shares, price)
             value = price * shares
 
             self.cash -= value
@@ -265,7 +235,7 @@ class TurtleSystem:
         else:
             if position['long']:
                 # Check to exit existing long position
-                if price <= data[f'S{S}_ExL'] or price <= position['stop_price']:
+                if price == data[f'S{S}_ExL'] or price <= position['stop_price']:
                     self.cash += position['shares'] * price
                     if price >= position['entry_price']:
                         self.last_s1_win[ticker] = True
@@ -274,7 +244,7 @@ class TurtleSystem:
                     position = None
                 # Check to pyramid existing position
                 elif position['units'] < self.unit_limit:
-                    if price >= position['entry_price'] + (self.pyramid_units * position['entry_N']):
+                    if price >= position['entry_price'] + position['entry_N']:
                         shares = self._size_position(data, dollar_units)
                         shares = self._check_cash_balance(shares, price)
                         self.cash -= shares * price
@@ -287,7 +257,7 @@ class TurtleSystem:
                         position['units'] += 1
             else:
                 # Check to exit existing short position
-                if price >= data[f'S{S}_ExS'] or price >= position['stop_price']:
+                if price == data[f'S{S}_ExS'] or price >= position['stop_price']:
                     self.cash += position['shares'] * price
                     if S == 1:
                         if price <= position['entry_price']:
@@ -297,7 +267,7 @@ class TurtleSystem:
                     position = None
                 # Check to pyramid existing position
                 elif position['units'] < self.unit_limit:
-                    if price <= position['entry_price'] - (self.pyramid_units * position['entry_N']):
+                    if price <= position['entry_price'] - position['entry_N']:
                         shares = self._size_position(data, dollar_units)
                         shares = self._check_cash_balance(shares, price)
                         self.cash -= shares * price
@@ -398,48 +368,45 @@ table = pd.read_html(url)
 df = table[0]
 syms = df['Symbol']
 
+for i in range(0,100):
+    # Sample symbols
+    tickers = list(np.random.choice(syms.values, size=5))
+    #tickers = ["AAPL", "MSFT", "AMZN"]
+    print("Ticker Symbols:")
+    _ = [print(f"\t{i}") for i in tickers]
+    sys = TurtleSystem(tickers, init_account_size=1E4, start='2000-01-01')
+    sys.run()
 
-# Sample symbols
-#tickers = list(np.random.choice(syms.values, size=10))
-#tickers = ["AAPL", "MSFT", "AMZN"]
-tickers = ["SPY"]
-print("Ticker Symbols:")
-_ = [print(f"\t{i}") for i in tickers]
-sys = TurtleSystem(tickers, init_account_size=1E5, start='2020-09-01')
-sys.run()
-
-#trans = sys.get_transactions()
-
-port_values = sys.get_portfolio_values()
-returns = port_values / port_values.shift(1)
-log_returns = np.log(returns)
-cum_rets = log_returns.cumsum()
+    port_values = sys.get_portfolio_values()
+    returns = port_values / port_values.shift(1)
+    log_returns = np.log(returns)
+    cum_rets = log_returns.cumsum()
 
 
 
-# Compare to SPY baseline
-sp500 = yf.Ticker('SPY').history(start=sys.start, end=sys.end)
-sp500['returns'] = sp500['Close'] / sp500['Close'].shift(1)
-sp500['log_returns'] = np.log(sp500['returns'])
-sp500['cum_rets'] = sp500['log_returns'].cumsum()
+    # Compare to SPY baseline
+    sp500 = yf.Ticker('SPY').history(start=sys.start, end=sys.end)
+    sp500['returns'] = sp500['Close'] / sp500['Close'].shift(1)
+    sp500['log_returns'] = np.log(sp500['returns'])
+    sp500['cum_rets'] = sp500['log_returns'].cumsum()
 
+    """
+    plt.figure(figsize=(12, 8))
+    plt.plot((np.exp(cum_rets) -1 )* 100, label='Turtle Strategy')
+    plt.plot((np.exp(sp500['cum_rets']) - 1) * 100, label='SPY')
+    plt.xlabel('Date')
+    plt.ylabel('Returns (%)')
+    plt.title('Cumulative Portfolio Returns')
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+    """
 
-plt.figure(figsize=(12, 8))
-plt.plot((np.exp(cum_rets) -1 )* 100, label='Turtle Strategy')
-plt.plot((np.exp(sp500['cum_rets']) - 1) * 100, label='SPY')
-plt.xlabel('Date')
-plt.ylabel('Returns (%)')
-plt.title('Cumulative Portfolio Returns')
-plt.legend()
-plt.tight_layout()
-plt.show()
-
-
-stats = getStratStats(log_returns)
-spy_stats = getStratStats(sp500['log_returns'])
-df_stats = pd.DataFrame(stats, index=['Turtle'])
-df_stats = pd.concat([df_stats, pd.DataFrame(spy_stats, index=['SPY'])])
-print(df_stats)
+    stats = getStratStats(log_returns)
+    spy_stats = getStratStats(sp500['log_returns'])
+    df_stats = pd.DataFrame(stats, index=['Turtle'])
+    df_stats = pd.concat([df_stats, pd.DataFrame(spy_stats, index=['SPY'])])
+    print(df_stats)
 
 
 print("나는 2025년 12월 31일 10억 자산과 월500만원 버는 시스템을 갖추고 은퇴했다")

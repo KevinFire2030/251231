@@ -55,7 +55,7 @@ class TurtleSystem:
     def __init__(self, tickers, init_account_size=10000, risk_level=2, r_max=0.02,
                  sys1_entry=20, sys1_exit=10, sys2_entry=55, sys2_exit=20,
                  atr_periods=20, sys1_allocation=0.5, risk_reduction_rate=0.1,
-                 risk_reduction_level=0.2, unit_limit=5, pyramid_units=1.5,
+                 risk_reduction_level=0.2, unit_limit=5, pyramid_units=1,
                  dollars_per_point = 1, start='2000-01-01', end='2023-09-26', shorts=True):
         '''
         :tickers: list of security symbols to trade.
@@ -113,7 +113,7 @@ class TurtleSystem:
     def _prep_data(self):
         self.data = self._get_data()
 
-        self.data.drop(['QQQ'], inplace=True, axis=1)
+        #self.data.drop(['QQQ'], inplace=True, axis=1)
 
         self._calc_breakouts()
         self._calc_N()
@@ -125,12 +125,12 @@ class TurtleSystem:
     def _get_data(self):
         # Gets data for all tickers from YFinance
 
-        tickers = ["SPY", "QQQ"]
+        #tickers = ["SPY", "QQQ"]
 
-        yfObj = yf.Tickers(tickers)
+        yfObj = yf.Tickers(self.tickers)
         #df = yfObj.history(start=self.start, end=self.end, interval='1h', back_adjust=True, auto_adjust=True, prepost=True)
-        df = yfObj.history(start=self.start, end=self.end)
-        #df.drop(['Open', 'Dividends', 'Stock Splits', 'Volume'], inplace=True, axis=1)
+        df = yfObj.history(start=self.start, end=self.end, interval='1h')
+        df.drop(['Open', 'Dividends', 'Stock Splits', 'Volume'], inplace=True, axis=1)
         df.ffill(inplace=True)
 
         return df.swaplevel(axis=1)
@@ -400,15 +400,15 @@ syms = df['Symbol']
 
 
 # Sample symbols
-#tickers = list(np.random.choice(syms.values, size=10))
+tickers = list(np.random.choice(syms.values, size=5))
 #tickers = ["AAPL", "MSFT", "AMZN"]
-tickers = ["SPY"]
+#tickers = ["SPY"]
 print("Ticker Symbols:")
 _ = [print(f"\t{i}") for i in tickers]
-sys = TurtleSystem(tickers, init_account_size=1E5, start='2020-09-01')
+sys = TurtleSystem(tickers, init_account_size=1E5, start='2023-01-01')
 sys.run()
 
-#trans = sys.get_transactions()
+trans = sys.get_transactions()
 
 port_values = sys.get_portfolio_values()
 returns = port_values / port_values.shift(1)
@@ -418,7 +418,7 @@ cum_rets = log_returns.cumsum()
 
 
 # Compare to SPY baseline
-sp500 = yf.Ticker('SPY').history(start=sys.start, end=sys.end)
+sp500 = yf.Ticker('SPY').history(start=sys.start, end=sys.end, interval='1h')
 sp500['returns'] = sp500['Close'] / sp500['Close'].shift(1)
 sp500['log_returns'] = np.log(sp500['returns'])
 sp500['cum_rets'] = sp500['log_returns'].cumsum()
