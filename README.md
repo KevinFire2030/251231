@@ -1,3 +1,74 @@
+
+[231008]
+* https://covely.tistory.com/20, 코딩 놀이터, 터틀 전략 BackTrader로 백테스팅
+* https://raposa.trade/blog/testing-turtle-trading-the-system-that-made-newbie-traders-millions/
+
+
+(toutle.py, price 제외)
+
+Ticker Symbols:
+	SNA
+	REGN
+	PEG
+	ARE
+	NTAP
+
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       7.9963          0.0972  ...        0.5096                    989
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+Ticker Symbols:
+	DHR
+	HOLX
+	PH
+	OGN
+	AEP
+
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      14.7340          0.1234  ...        0.4088                    952
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+Ticker Symbols:
+	TMO
+	TPR
+	EMR
+	TEL
+	TRV
+
+         tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle       9.1459          0.1028  ...        0.6249                   1756
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+
+Ticker Symbols:
+	BX
+	STLD
+	MTD
+	KR
+	SYF
+
+         tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      25.3087          0.1480  ...        0.4523                   1727
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/4d4542f9-8e0c-4a60-b62d-abe9732d1561)
+
+
+Ticker Symbols:
+	TGT
+	HIG
+	CMA
+	J
+	CRM
+
+         tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      14.4227          0.1224  ...        0.5819                   1114
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/e76b2af3-fd4e-4d69-b0ae-b0d442b55a58)
+
+
 [231007]
 * 듀얼 모멘텀 전략, 소나기 피하기, 횡보시 거래 중지 (혹은 평균회귀 전략)
 * 일정 속도 이상일때만
