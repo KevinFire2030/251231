@@ -1,6 +1,119 @@
 [231009]
 * 백테스트
 * 오리지널 터틀 (2% 리스크)
+* transaction 분석 vs BT 구현 (code trading, 이헌열)
+* 삼중창 구현
+* 1시간/5분 백테스트
+* 터틀처럼, 한걸음 한걸음, 내 걸음으로
+
+
+(turtle_orginal_231009v2.1.py)
+* transaction 분석, np.where() 함수 활용
+* 주요 지표 계산식 검증, 강환국의 할수 있다 퀀트 투자, 보고 싶은 지표
+* 월별 수익율 구현, bt
+* 즐기기
+* 수익률 계산 변경, pct_change(1)
+* 기간 줄이기
+* 파일 혹은 DB에서 읽기
+* 총 테스트 기간(데이터 갯수), 테스트 횟수, 롱숏, 승율, 평균 이익율, 엑셀로 분석
+* MDD 이해하기
+* 나스닥 1분봉/1시간봉 열추가하기 혹은 1개 종목만 
+* 타이밍 bt, run에서 ticker 1개만 돌리기, 혹은 ticker 없이
+* 있는거 완벽하게 이해하기, 이것 저것 전선 넓히지 않기, 선택과 집중
+* getStratStats -> get_transactions(self) -> 시간단위 변경(1h/1m) 기간 최대 설정 변수 -> 횡보구간 제외시
+* backtesting.py 보니까 욕심이 생기네, 하지만 필요한 것만 참조
+
+
+◇ 다시!! backtesting.py
+* 해보자
+
+
+◇ 다시!! get_transactions()
+* show_trades
+* # Trades
+* Win Rate[%]
+* 
+
+◇ 도전!! backtesting.py
+* 된다!! 하면된다
+* 해보자
+* CodeTrading 참고
+* 쉬운게 없구나 ㅠㅠ
+
+
+◇ get_transactions()
+* 엑셀로 저장해서 분석, 총거래
+
+trades = sys.get_transactions()
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/5af6370c-3284-4d82-a88b-f1cfbfdd1f89)
+
+
+◇ getStratStats
+* 있는거 이해하기
+* 추가하기, 강환국, 시그널메이커
+* 월별 수익율, bt_monthly
+* exp
+* pandas cumprod() 함수, 누적곱
+
+```py
+
+tats = {}  # Total Returns
+    stats['tot_returns'] = np.exp(log_returns.sum()) - 1
+
+    # Mean Annual Returns
+    stats['annual_returns'] = np.exp(log_returns.mean() * 252) - 1
+
+    # Annual Volatility
+    stats['annual_volatility'] = log_returns.std() * np.sqrt(252)
+
+```
+
+
+
+◇ get_portfolio_values(self)
+* 포트폴리오 자료 구조 이해하기
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/dcd7b1a5-ec01-4e6d-974f-99304ae31e51)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/e020e4b4-f2ba-4177-829f-ad6438719bde)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/bb2dcb7d-a5d4-4558-8b22-e3df9d662158)
+
+
+
+```py
+
+    def get_portfolio_values(self):
+        vals = []
+        for v in self.portfolio.values():
+            pv = sum([v1['value'] for v0 in v.values() if type(v0) is dict
+                      for k1, v1 in v0.items() if v1 is not None])
+            pv += v['cash']
+            vals.append(pv)
+        return pd.Series(vals, index=self.data.index)
+```
+
+◇ 수익률 계산 변경, pct_change(1)
+```
+# Compare to SPY baseline
+    sp500 = yf.Ticker('SPY').history(start=sys.start, end=sys.end)
+    sp500['returns'] = sp500['Close'] / sp500['Close'].shift(1)
+    sp500['log_returns'] = np.log(sp500['returns'])
+    sp500['cum_rets'] = sp500['log_returns'].cumsum()
+
+    sp500['pct_change'] = sp500['Close'].pct_change(1).dropna()
+```
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/60707c4d-5339-46c3-b056-4fea117afffe)
+
+
+
+
+(Trading Indicator Analysis: CHOCH Indicator Python Implementation)
+
 
 (turtle_orginal_231008v2.0.py)
 * 랜덤 5종목, 2000.01.01 - 2023.09.26, 100회
