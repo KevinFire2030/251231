@@ -368,43 +368,49 @@ table = pd.read_html(url)
 df = table[0]
 syms = df['Symbol']
 
+df = pd.DataFrame()
 
-# Sample symbols
-tickers = list(np.random.choice(syms.values, size=5))
-#tickers = ["AAPL", "MSFT", "AMZN"]
-print("Ticker Symbols:")
-_ = [print(f"\t{i}") for i in tickers]
-sys = TurtleSystem(tickers, init_account_size=1E4, start='2000-01-01')
-sys.run()
+for i in range(0,1):
+    # Sample symbols
+    tickers = list(np.random.choice(syms.values, size=5))
+    #tickers = ["AAPL", "MSFT", "AMZN"]
+    print("Ticker Symbols:")
+    _ = [print(f"\t{i}") for i in tickers]
+    sys = TurtleSystem(tickers, init_account_size=1E4, start='2000-01-01')
+    sys.run()
 
-port_values = sys.get_portfolio_values()
-returns = port_values / port_values.shift(1)
-log_returns = np.log(returns)
-cum_rets = log_returns.cumsum()
+    port_values = sys.get_portfolio_values()
+    returns = port_values / port_values.shift(1)
+    log_returns = np.log(returns)
+    cum_rets = log_returns.cumsum()
 
 
 
-# Compare to SPY baseline
-sp500 = yf.Ticker('SPY').history(start=sys.start, end=sys.end)
-sp500['returns'] = sp500['Close'] / sp500['Close'].shift(1)
-sp500['log_returns'] = np.log(sp500['returns'])
-sp500['cum_rets'] = sp500['log_returns'].cumsum()
+    # Compare to SPY baseline
+    sp500 = yf.Ticker('SPY').history(start=sys.start, end=sys.end)
+    sp500['returns'] = sp500['Close'] / sp500['Close'].shift(1)
+    sp500['log_returns'] = np.log(sp500['returns'])
+    sp500['cum_rets'] = sp500['log_returns'].cumsum()
 
-plt.figure(figsize=(12, 8))
-plt.plot((np.exp(cum_rets) -1 )* 100, label='Turtle Strategy')
-plt.plot((np.exp(sp500['cum_rets']) - 1) * 100, label='SPY')
-plt.xlabel('Date')
-plt.ylabel('Returns (%)')
-plt.title('Cumulative Portfolio Returns')
-plt.legend()
-plt.tight_layout()
-plt.show()
+    """
+    plt.figure(figsize=(12, 8))
+    plt.plot((np.exp(cum_rets) -1 )* 100, label='Turtle Strategy')
+    plt.plot((np.exp(sp500['cum_rets']) - 1) * 100, label='SPY')
+    plt.xlabel('Date')
+    plt.ylabel('Returns (%)')
+    plt.title('Cumulative Portfolio Returns')
+    plt.legend()
+    plt.tight_layout()
+    plt.show()
+    """
 
-stats = getStratStats(log_returns)
-spy_stats = getStratStats(sp500['log_returns'])
-df_stats = pd.DataFrame(stats, index=['Turtle'])
-df_stats = pd.concat([df_stats, pd.DataFrame(spy_stats, index=['SPY'])])
-print(df_stats)
+    stats = getStratStats(log_returns)
+    spy_stats = getStratStats(sp500['log_returns'])
+    df_stats = pd.DataFrame(stats, index=['Turtle'])
+    df_stats = pd.concat([df_stats, pd.DataFrame(spy_stats, index=['SPY'])])
+    print(df_stats)
+    df = df.append(df_stats, ignore_index=False)
 
+df.to_excel('resutl.xlsx')
 
 print("나는 2025년 12월 31일 10억 자산과 월500만원 버는 시스템을 갖추고 은퇴했다")
