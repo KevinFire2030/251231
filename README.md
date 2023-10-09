@@ -1,3 +1,15 @@
+[231009]
+* 백테스트
+* 오리지널 터틀 (2% 리스크)
+
+(turtle_orginal_231008v2.0.py)
+* 랜덤 5종목, 2000.01.01 - 2023.09.26, 100회
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/85e9ecfe-c97a-4aa0-924c-a30067b05d44)
+
+[resutl.xlsx](https://github.com/KevinFire2030/251231/files/12842079/resutl.xlsx)
+
+
 
 [231008]
 * https://covely.tistory.com/20, 코딩 놀이터, 터틀 전략 BackTrader로 백테스팅
