@@ -5,6 +5,23 @@
 * position class 이해하기
 * codetrading 참고, stackoverflow 사이트 참고
 * 시간
+* 키움 연동, next() 호출
+
+(pyramid)
+* 총알이 있냐
+* trade와 position 바꾸기
+
+(tl 동적 변경)
+
+```
+        if len(self.trades) > 0:
+
+            if self.trades[-1].is_long and (price == S1_ExL or price <= self.trades[-1].sl):
+                self.trades[-1].close()
+
+            elif self.trades[-1].is_short and (price == S1_ExS or price >= self.trades[-1].sl):
+                self.trades[-1].close()
+```
 
 (size 주식 수로 주문이 안되는 이유)
 
