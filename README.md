@@ -1,3 +1,25 @@
+
+[231010]
+* 포트폴리오 vs 타이밍
+* backtesing.py 좀더 파보자, 파이미팅 position size 변경, size에서 주식수로 하면 안되는 이유, position에서 tp 조정, close 동작, 1시간 봉
+* position class 이해하기
+* codetrading 참고, stackoverflow 사이트 참고
+* 시간
+
+(size 주식 수로 주문이 안되는 이유)
+
+```
+ def _check_cash_balance(self, shares, price):
+        # Checks to see if we have enough cash to make purchase.
+        # If not, resizes position to lowest feasible level
+        if self.equity <= shares * price:
+            shares = np.floor(self.equity / price)
+        return shares
+
+
+```
+
+
 [231009]
 * 백테스트
 * 오리지널 터틀 (2% 리스크)
