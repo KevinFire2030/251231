@@ -1,4 +1,10 @@
 
+
+[231011]
+* 피라미딩
+* 횡보구간 피하기
+
+
 [231010]
 * 포트폴리오 vs 타이밍
 * backtesing.py 좀더 파보자, 파이미팅 position size 변경, size에서 주식수로 하면 안되는 이유, position에서 tp 조정, close 동작, 1시간 봉
