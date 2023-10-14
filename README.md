@@ -1,3 +1,10 @@
+[231014]
+* 승률과 손익비 그리고 비중조절
+
+
+
+(승률과 손익비 그리고 비중조절)
+https://www.youtube.com/watch?v=Ey_czmqP1Xs
 
 
 [231011]
