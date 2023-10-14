@@ -1,9 +1,30 @@
 [231014]
 * 승률과 손익비 그리고 비중조절
+* 터틀 백테스팅, 시간, 분단위, 결과 보기
 
+(turtle_231014v1.9)
+* 데이터 읽기, 시간/분 단위
+* 거래수, 승률, 손익비, 평균 이익, 평균 손실, 최대/최소 이익, 최대/최소 손실, 평균 거래일수, 최대 거래일수
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/7eeaa9b1-9287-4f2f-a681-b3aa99ec9a27)
+
+
+tickers = ["AAPL", "MSFT", "AMZN"]
+
+sys = TurtleSystem(tickers, init_account_size=1E4, start='2000-01-01')
+
+
+        tot_returns  annual_returns  ...  max_drawdown  max_drawdown_duration
+Turtle      44.0638          0.1744  ...        0.6616                   2625
+SPY          3.5854          0.0664  ...        0.5519                   2406
+
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/dd971ff5-c055-4974-a0e1-826c8d741820)
 
 
 (승률과 손익비 그리고 비중조절)
+
 https://www.youtube.com/watch?v=Ey_czmqP1Xs
 
 
