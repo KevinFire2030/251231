@@ -1,5 +1,10 @@
 [231015]
+* 통계를 내보니 신뢰도가 확떨어지는데 ㅋ
+* 일단 저장
 
+(turtle_231014v1.9)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/6b2d23e5-c699-4c07-a59a-328e8f56d70a)
 
 
 
