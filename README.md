@@ -12,7 +12,116 @@
 AAPL 1시간봉
 ticker = yf.Ticker("AAPL")
 ohlcv = ticker.history(interval='1h')
+size = 0.2
 
+                for i in reversed(range(0, len(self.trades))):
+                    self.trades[i].close()
+
+Start                                     0.0
+End                                     121.0
+Duration                                121.0
+Exposure Time [%]                   66.393443
+Equity Final [$]                  10077.44046
+Equity Peak [$]                  10182.589462
+Return [%]                           0.774405
+Buy & Hold Return [%]                 0.48518
+Return (Ann.) [%]                         0.0
+Volatility (Ann.) [%]                     NaN
+Sharpe Ratio                              NaN
+Sortino Ratio                             NaN
+Calmar Ratio                              0.0
+Max. Drawdown [%]                   -1.315668
+Avg. Drawdown [%]                   -0.579292
+Max. Drawdown Duration                   54.0
+Avg. Drawdown Duration              18.333333
+# Trades                                 13.0
+Win Rate [%]                        53.846154
+Best Trade [%]                       3.006381
+Worst Trade [%]                      -1.25181
+Avg. Trade [%]                       0.302979
+Max. Trade Duration                      41.0
+Avg. Trade Duration                 17.384615
+Profit Factor                        1.783875
+Expectancy [%]                       0.311594
+SQN                                  0.935513
+_strategy                              Turtle
+_equity_curve                        Equit...
+_trades                       Size  EntryB...
+dtype: object
+    Size  EntryBar  ExitBar  EntryPrice   ExitPrice        PnL  ReturnPct  EntryTime  ExitTime  Duration
+0    -11         2       11  174.550003  176.380005 -20.130020  -0.010484          2        11         9
+1    -11        24       40  173.089996  171.889999  13.199966   0.006933         24        40        16
+2     -9        29       40  171.740005  171.889999  -1.349945  -0.000873         29        40        11
+3     -7        33       40  169.850006  171.889999 -14.279953  -0.012011         33        40         7
+4     11        52       59  173.350006  171.179993 -23.870148  -0.012518         52        59         7
+5      5        85       86  177.934998  175.995081  -9.699585  -0.010902         85        86         1
+6     11        75      116  173.960098  179.190002  57.528946   0.030064         75       116        41
+7      9        78      116  175.119995  179.190002  36.630066   0.023241         78       116        38
+8      7        82      116  176.679993  179.190002  17.570068   0.014207         82       116        34
+9      5        90      116  177.960007  179.190002   6.149979   0.006912         90       116        26
+10     4        92      116  178.899994  179.190002   1.160034   0.001621         92       116        24
+11     4       107      116  180.070007  179.190002  -3.520020  -0.004887        107       116         9
+12   -11       118      121  178.261002  176.619995  18.051071   0.009206        118       121         3
+
+AAPL 1시간봉
+ticker = yf.Ticker("AAPL")
+ohlcv = ticker.history(interval='1h')
+size = 0.2
+
+
+Start                                     0.0
+End                                     134.0
+Duration                                134.0
+Exposure Time [%]                   62.962963
+Equity Final [$]                 10042.930283
+Equity Peak [$]                  10173.599365
+Return [%]                           0.429303
+Buy & Hold Return [%]                0.241515
+Return (Ann.) [%]                         0.0
+Volatility (Ann.) [%]                     NaN
+Sharpe Ratio                              NaN
+Sortino Ratio                             NaN
+Calmar Ratio                              0.0
+Max. Drawdown [%]                   -1.316831
+Avg. Drawdown [%]                   -0.550538
+Max. Drawdown Duration                   54.0
+Avg. Drawdown Duration              16.857143
+# Trades                                 15.0
+Win Rate [%]                        46.666667
+Best Trade [%]                       3.006381
+Worst Trade [%]                      -1.25181
+Avg. Trade [%]                       0.132871
+Max. Trade Duration                      41.0
+Avg. Trade Duration                 15.866667
+Profit Factor                        1.329292
+Expectancy [%]                       0.140677
+SQN                                  0.511876
+_strategy                              Turtle
+_equity_curve                        Equit...
+_trades                       Size  EntryB...
+dtype: object
+    Size  EntryBar  ExitBar  EntryPrice   ExitPrice        PnL  ReturnPct  EntryTime  ExitTime  Duration
+0     11         7       10  179.130005  177.589996 -16.940094  -0.008597          7        10         3
+1     -9        16       25  174.550003  176.380005 -16.470016  -0.010484         16        25         9
+2    -11        15       25  176.770004  176.380005   4.289993   0.002206         15        25        10
+3     -7        47       54  169.850006  171.889999 -14.279953  -0.012011         47        54         7
+4     -9        43       54  171.740005  171.889999  -1.349945  -0.000873         43        54        11
+5    -11        38       54  173.089996  171.889999  13.199966   0.006933         38        54        16
+6     11        66       73  173.350006  171.179993 -23.870148  -0.012518         66        73         7
+7      5        99      100  177.934998  175.995081  -9.699585  -0.010902         99       100         1
+8      4       121      130  180.070007  179.190002  -3.520020  -0.004887        121       130         9
+9      4       106      130  178.899994  179.190002   1.160034   0.001621        106       130        24
+10     5       104      130  177.960007  179.190002   6.149979   0.006912        104       130        26
+11     7        96      130  176.679993  179.190002  17.570068   0.014207         96       130        34
+12     9        92      130  175.119995  179.190002  36.630066   0.023241         92       130        38
+13    11        89      130  173.960098  179.190002  57.528946   0.030064         89       130        41
+14   -11       132      134  178.261002  178.940002  -7.469009  -0.003809        132       134         2
+
+
+AAPL 1시간봉
+ticker = yf.Ticker("AAPL")
+ohlcv = ticker.history(interval='1h')
+size = 0.1
 
 Start                                     0.0
 End                                     134.0
