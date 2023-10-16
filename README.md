@@ -1,6 +1,42 @@
 [231016]
 
 * 피라미딩 구현
+
+Start                                     0.0
+End                                    5949.0
+Duration                               5949.0
+Exposure Time [%]                   72.672269
+Equity Final [$]                 16596.875874
+Equity Peak [$]                  17326.389727
+Return [%]                          65.968759
+Buy & Hold Return [%]            22130.181273
+Return (Ann.) [%]                         0.0
+Volatility (Ann.) [%]                     NaN
+Sharpe Ratio                              NaN
+Sortino Ratio                             NaN
+Calmar Ratio                              0.0
+Max. Drawdown [%]                  -20.772209
+Avg. Drawdown [%]                   -3.300172
+Max. Drawdown Duration                 1689.0
+Avg. Drawdown Duration             128.478261
+# Trades                                711.0
+Win Rate [%]                        39.803094
+Best Trade [%]                      59.952609
+Worst Trade [%]                    -26.424501
+Avg. Trade [%]                       0.543516
+Max. Trade Duration                      79.0
+Avg. Trade Duration                 14.566807
+Profit Factor                        1.357373
+Expectancy [%]                        0.92328
+SQN                                   2.55557
+_strategy                              Turtle
+_equity_curve                         Equi...
+_trades                        Size  Entry...
+dtype: object
+
+
+
+
 ```
 class Turtle(Strategy):
 
