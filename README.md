@@ -1,5 +1,123 @@
 [231016]
 
+
+(bt_turtle_231016v1.3.py)
+* 머징
+* 날짜, 표준시 처리
+
+(피라미딩 적용후)
+
+```
+
+AAPL 1시간봉
+ticker = yf.Ticker("AAPL")
+ohlcv = ticker.history(interval='1h')
+
+
+Start                                     0.0
+End                                     134.0
+Duration                                134.0
+Exposure Time [%]                   62.962963
+Equity Final [$]                 10019.874838
+Equity Peak [$]                  10097.189886
+Return [%]                           0.198748
+Buy & Hold Return [%]                0.241515
+Return (Ann.) [%]                         0.0
+Volatility (Ann.) [%]                     NaN
+Sharpe Ratio                              NaN
+Sortino Ratio                             NaN
+Calmar Ratio                              0.0
+Max. Drawdown [%]                   -0.780564
+Avg. Drawdown [%]                   -0.342732
+Max. Drawdown Duration                   55.0
+Avg. Drawdown Duration              19.833333
+# Trades                                 15.0
+Win Rate [%]                        46.666667
+Best Trade [%]                       3.006381
+Worst Trade [%]                      -1.25181
+Avg. Trade [%]                       0.132871
+Max. Trade Duration                      41.0
+Avg. Trade Duration                 15.866667
+Profit Factor                        1.329292
+Expectancy [%]                       0.140677
+SQN                                  0.473592
+_strategy                              Turtle
+_equity_curve                        Equit...
+_trades                       Size  EntryB...
+dtype: object
+    Size  EntryBar  ExitBar  EntryPrice   ExitPrice        PnL  ReturnPct  EntryTime  ExitTime  Duration
+0      5         7       10  179.130005  177.589996  -7.700043  -0.008597          7        10         3
+1     -5        16       25  174.550003  176.380005  -9.150009  -0.010484         16        25         9
+2     -5        15       25  176.770004  176.380005   1.949997   0.002206         15        25        10
+3     -4        47       54  169.850006  171.889999  -8.159973  -0.012011         47        54         7
+4     -5        43       54  171.740005  171.889999  -0.749969  -0.000873         43        54        11
+5     -5        38       54  173.089996  171.889999   5.999985   0.006933         38        54        16
+6      5        66       73  173.350006  171.179993 -10.850067  -0.012518         66        73         7
+7      4        99      100  177.934998  175.995081  -7.759668  -0.010902         99       100         1
+8      3       121      130  180.070007  179.190002  -2.640015  -0.004887        121       130         9
+9      3       106      130  178.899994  179.190002   0.870026   0.001621        106       130        24
+10     4       104      130  177.960007  179.190002   4.919983   0.006912        104       130        26
+11     4        96      130  176.679993  179.190002  10.040039   0.014207         96       130        34
+12     5        92      130  175.119995  179.190002  20.350037   0.023241         92       130        38
+13     5        89      130  173.960098  179.190002  26.149521   0.030064         89       130        41
+14    -5       132      134  178.261002  178.940002  -3.395004  -0.003809        132       134         2
+
+```
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/253fd82d-664c-4ed2-8d48-5fb80b5114f9)
+
+
+(피라미딩 적용전)
+
+```
+AAPL 1시간봉
+ticker = yf.Ticker("AAPL")
+ohlcv = ticker.history(interval='1h')
+
+
+Start                                     0.0
+End                                     134.0
+Duration                                134.0
+Exposure Time [%]                   62.962963
+Equity Final [$]                 10012.154388
+Equity Peak [$]                  10030.949402
+Return [%]                           0.121544
+Buy & Hold Return [%]                0.241515
+Return (Ann.) [%]                         0.0
+Volatility (Ann.) [%]                     NaN
+Sharpe Ratio                              NaN
+Sortino Ratio                             NaN
+Calmar Ratio                              0.0
+Max. Drawdown [%]                   -0.246564
+Avg. Drawdown [%]                   -0.113801
+Max. Drawdown Duration                   54.0
+Avg. Drawdown Duration              16.857143
+# Trades                                  6.0
+Win Rate [%]                             50.0
+Best Trade [%]                       3.006381
+Worst Trade [%]                      -1.25181
+Avg. Trade [%]                       0.228356
+Max. Trade Duration                      41.0
+Avg. Trade Duration                 13.166667
+Profit Factor                        1.572878
+Expectancy [%]                       0.237976
+SQN                                  0.372438
+_strategy                              Turtle
+_equity_curve                        Equit...
+_trades                      Size  EntryBa...
+dtype: object
+   Size  EntryBar  ExitBar  EntryPrice   ExitPrice        PnL  ReturnPct  EntryTime  ExitTime  Duration
+0     5         7       10  179.130005  177.589996  -7.700043  -0.008597          7        10         3
+1    -5        15       25  176.770004  176.380005   1.949997   0.002206         15        25        10
+2    -5        38       54  173.089996  171.889999   5.999985   0.006933         38        54        16
+3     5        66       73  173.350006  171.179993 -10.850067  -0.012518         66        73         7
+4     5        89      130  173.960098  179.190002  26.149521   0.030064         89       130        41
+5    -5       132      134  178.261002  178.940002  -3.395004  -0.003809        132       134         2
+```
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/a83d4b8e-dac5-402b-929d-1b80187f8404)
+
+
 * 피라미딩 구현
 ```
 Start                                     0.0
