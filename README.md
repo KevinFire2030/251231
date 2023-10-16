@@ -1,3 +1,123 @@
+[231016]
+
+* 피라미딩 구현
+```
+class Turtle(Strategy):
+
+    def init(self):
+
+        super().init()
+
+        pass
+
+    def _check_cash_balance(self, shares, price):
+        # Checks to see if we have enough cash to make purchase.
+        # If not, resizes position to lowest feasible level
+        if self.equity <= shares * price:
+            shares = np.floor(self.equity / price)
+        return shares
+
+    def next(self):
+        super().next()
+
+        price = self.data.Close[-1]
+        S1_EL = self.data.S1_EL[-1]
+        S1_ES = self.data.S1_ES[-1]
+
+        S1_ExL = self.data.S1_ExL[-1]
+        S1_ExS = self.data.S1_ExS[-1]
+
+        N = self.data.N[-1]
+
+        #size = (self.equity * r_max) // N
+        #unit = np.floor((self.equity * r_max) // (5 * N) )
+
+        #unit = self._check_cash_balance(unit, price)
+
+        #unit = 70
+
+
+        if len(self.trades) > 0 :
+
+            #self.trades[-1].entry_price = 10
+
+
+            #Exit
+            if self.trades[-1].is_long and (price == S1_ExL or price <= self.trades[-1].sl):
+
+                for i in range(0, len(self.trades)):
+                    self.trades[i].close()
+
+                return
+
+            elif self.trades[-1].is_short and (price == S1_ExS or price >= self.trades[-1].sl):
+                for i in range(0, len(self.trades)):
+                    self.trades[i].close()
+
+                return
+
+
+            # Pyramid
+            if self.trades[-1].is_long and (price >= self.trades[-1].entry_price + N) and (len(self.trades) < 6):
+
+                sl = price - 2 * N
+                self.buy(sl=sl, size=0.1)
+
+                print("롱 불타기")
+
+            elif self.trades[-1].is_short and (price <= self.trades[-1].entry_price - N) and (len(self.trades) < 6):
+
+                sl = price + 2 * N
+                self.sell(sl=sl, size=0.1)
+
+                print("숏 불타기")
+
+
+
+        """
+        if len(self.trades) > 0:
+
+            if self.trades[-1].is_long:
+                self.trades[-1].tp = S1_ExL
+
+            elif self.trades[-1].is_short:
+                self.trades[-1].tp = S1_ExL
+
+            pass
+        """
+
+        if len(self.trades) == 0:
+
+            # Buy on breakout
+            if price == S1_EL:
+
+                #tp = price + 4 * N
+                sl = price - 2 * N
+
+
+                #self.buy(sl=sl,size=size)
+
+                #self.buy(sl=sl, tp=tp, size=unit)
+                self.buy(sl=sl, size=0.1)
+                #self.buy(sl=sl, size=0.1)
+                #self.buy(sl=sl, size=unit)
+
+            # Sell short
+            elif price == S1_ES:
+
+                #tp = price - 4 * N
+                sl = price + 2 * N
+
+
+                #self.sell(sl=sl,tp=tp, size=unit)
+                #self.sell(sl=sl, size=unit)
+                self.sell(sl=sl, size=0.1)
+
+
+```
+
+
+
 [231015]
 * 통계를 내보니 신뢰도가 확떨어지는데 ㅋ
 * 일단 저장
