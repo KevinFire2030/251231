@@ -1,7 +1,7 @@
 [231016]
 
 * 피라미딩 구현
-
+```
 Start                                     0.0
 End                                    5949.0
 Duration                               5949.0
@@ -34,7 +34,7 @@ _equity_curve                         Equi...
 _trades                        Size  Entry...
 dtype: object
 
-
+```
 
 
 ```
