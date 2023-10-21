@@ -6,6 +6,14 @@
 * 지표 추가, 승률과 손익비 그리고 비중조절
 
 
+(Detecting Price Trends in python - Higher Highs, Higher Lows)
+
+https://www.youtube.com/watch?v=v3z3FuxLzjU
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/2fcf3890-5ee5-48b7-b63b-aea63bc949a0)
+
+
 (Live trading support )
 
 https://github.com/kernc/backtesting.py/issues/81
