@@ -2,9 +2,131 @@
 * sl 변경하기
 * 거래량
 * 횡보구간
+* 손실은 작게 이익은 크게
+* 지표 추가, 승률과 손익비 그리고 비중조절
+
+
+(Live trading support )
+
+https://github.com/kernc/backtesting.py/issues/81
+
+(Stop Losses in Backtesting.py)
+* 참 대단한 사람들이 많구나 ㅠㅠ
+https://greyhoundanalytics.com/blog/stop-losses-in-backtestingpy/
+
+```
+from backtesting import Backtest
+from backtesting import Strategy
+from backtesting.test import GOOG
+from backtesting.lib import crossover
+
+class TrailingStrategy(Strategy):
+
+    __sl_amount = 6.
+
+    def init(self):
+        super().init()
+
+    def set_trailing_sl(self, sl_amount: float = 6):
+        """
+    Set the trailing stop loss as $n below the current price (for long positions)
+        Works for future bars only
+        """
+        self.__sl_amount = sl_amount
+
+    def next(self):
+        super().next()
+        # Can't use index=-1 because self.__atr is not an Indicator type
+        index = len(self.data)-1
+
+        for trade in self.trades:
+            if trade.is_long:
+                trade.sl = max(trade.sl or -np.inf,
+                               self.data.Close[index] -  self.__sl_amount)
+            else:
+                trade.sl = min(trade.sl or np.inf,
+                               self.data.Close[index] +  self.__sl_amount)
+
+```
+
+
+(adjusting SL/TP)
+https://github.com/kernc/backtesting.py/discussions/1015
+
+```
+
+       if len(self.trades) > 0:
+
+            self.trades[0].sl = self.trades[0].entry_price * 0.9
+            self.trades[0].tp = self.trades[0].entry_price * 1.1
+
+            self.trades[-1].sl = self.trades[-1].entry_price * 0.9
+            self.trades[-1].tp = self.trades[-1].entry_price * 1.1
+
+```
 
 
 
+```
+
+class MACDStrategy(Strategy):
+    
+    # Define the two EMA lags as *class variables*
+    # for later optimization
+    fast = 12
+    slow = 26
+    signal = 9
+    
+    def init(self):                
+        self.fast_macd      = self.I(MACD_Backtesting_FAST, self.data.Close, self.fast, overlay=True, name='FAST')
+        self.slow_macd      = self.I(MACD_Backtesting_SLOW, self.data.Close, self.slow, overlay=True, name='SLOW')        
+        self.macd_macd_      = MACD_Backtesting_MACD(self.fast_macd, self.slow_macd)        
+        self.signal_macd_    = MACD_Backtesting_SIGNAL(self.macd_macd_, self.signal)
+        self.histogram_macd_ = MACD_Backtesting_HISTOGRAMM(self.macd_macd_, self.signal_macd_)
+        
+        self.macd_macd, self.signal_macd, self.histogram_macd = self.I(
+            lambda: (self.macd_macd_, self.signal_macd_, self.histogram_macd_)                                    
+                , overlay=False,legends=['MACD', 'signal', 'histogramm'], histogramms=[False, False, True], scatter=False, name='MACD',)
+ ```       
+
+(SL First)
+When SL and TP are hit within the same bar, backtesting.py acts pessimistically, that is considering SL as hit first.
+SL과 TP가 동일한 막대 내에 도달하면 backtesting.py는 비관적으로 작동합니다. 즉, SL을 먼저 적중한 것으로 간주합니다.
+
+(timezone 제거)
+You can remove the time zone information of DatetimeIndex using DatetimeIndex.tz_localize() , as follows:
+
+hist.index = hist.index.tz_localize(None)
+
+
+bt = Backtest(df, Scalp_buy, cash=10000, commission=.0014, trade_on_close=True)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/39cdc5e5-edff-43bd-ae7c-433f4b82e1b6)
+
+```
+Methods
+def I
+(
+self, func, *args, name=None, plot=True, overlay=None, color=None, scatter=False, **kwargs)
+Declare indicator. An indicator is just an array of values, but one that is revealed gradually in Strategy.next() much like Strategy.data is. Returns np.ndarray of indicator values.
+
+func is a function that returns the indicator array(s) of same length as Strategy.data.
+
+In the plot legend, the indicator is labeled with function name, unless name overrides it.
+
+If plot is True, the indicator is plotted on the resulting Backtest.plot().
+
+If overlay is True, the indicator is plotted overlaying the price candlestick chart (suitable e.g. for moving averages). If False, the indicator is plotted standalone below the candlestick chart. By default, a heuristic is used which decides correctly most of the time.
+
+color can be string hex RGB triplet or X11 color name. By default, the next available color is assigned.
+
+If scatter is True, the plotted indicator marker will be a circle instead of a connected line segment (default).
+
+Additional *args and **kwargs are passed to func and can be used for parameters.
+
+For example, using simple moving average function from TA-Lib:
+
+```
 
 
 [231020]
