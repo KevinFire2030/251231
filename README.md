@@ -1,3 +1,24 @@
+[231021]
+* sl 변경하기
+* 거래량
+* 횡보구간
+
+
+
+
+
+[231020]
+* 날짜
+* position close
+* 10일선 sl 표시, 
+* sl 변경하기
+* supertrend
+* 거래량
+* 횡보구간
+
+
+Close portion of position by closing portion of each active trade. See Trade.close().
+
 [231016]
 
 
