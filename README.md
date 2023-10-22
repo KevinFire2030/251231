@@ -1,3 +1,311 @@
+[231021]
+* sl 변경하기
+* 거래량
+* 횡보구간
+* 손실은 작게 이익은 크게
+* 지표 추가, 승률과 손익비 그리고 비중조절
+
+(롱숏)
+* SUPERTd
+
+```
+Start                     2023-01-03 00:00:00
+End                       2023-10-19 00:00:00
+Duration                    289 days 00:00:00
+Exposure Time [%]                   93.532338
+Equity Final [$]                 11813.134885
+Equity Peak [$]                  13583.359467
+Return [%]                          18.131349
+Buy & Hold Return [%]              103.617025
+Return (Ann.) [%]                   23.232844
+Volatility (Ann.) [%]               25.005783
+Sharpe Ratio                         0.929099
+Sortino Ratio                        1.807234
+Calmar Ratio                         1.640832
+Max. Drawdown [%]                  -14.159183
+Avg. Drawdown [%]                   -7.245193
+Max. Drawdown Duration      121 days 00:00:00
+Avg. Drawdown Duration       51 days 00:00:00
+# Trades                                   33
+Win Rate [%]                        42.424242
+Best Trade [%]                      42.986063
+Worst Trade [%]                    -13.014114
+Avg. Trade [%]                       4.403809
+Max. Trade Duration          41 days 00:00:00
+Avg. Trade Duration          18 days 00:00:00
+Profit Factor                        2.629905
+Expectancy [%]                        5.49794
+SQN                                  1.226756
+_strategy                              Turtle
+_equity_curve                             ...
+_trades                       Size  EntryB...
+dtype: object
+    Size  EntryBar  ExitBar  EntryPrice   ExitPrice         PnL  ReturnPct  EntryTime   ExitTime Duration
+0      5        12       18  133.419998  166.660004  166.200027   0.249138 2023-01-20 2023-01-30  10 days
+1      4        25       40  201.289993  190.772003  -42.071960  -0.052253 2023-02-08 2023-03-02  22 days
+2      5        22       40  189.979996  190.772003    3.960037   0.004169 2023-02-03 2023-03-02  27 days
+3      5        17       40  177.899994  190.772003   64.360046   0.072355 2023-01-27 2023-03-02  34 days
+4      8        16       40  160.270004  190.772003  244.015991   0.190316 2023-01-26 2023-03-02  35 days
+5     11        13       40  143.750000  190.772003  517.242035   0.327110 2023-01-23 2023-03-02  38 days
+6      9        12       40  133.419998  190.772003  516.168045   0.429861 2023-01-20 2023-03-02  41 days
+7     12        40       45  190.899994  174.977991 -191.064038  -0.083405 2023-03-02 2023-03-09   7 days
+8    -13        45       53  172.919998  195.424004 -292.552071  -0.130141 2023-03-09 2023-03-21  12 days
+9      7        53       62  197.580002  194.770004  -19.669983  -0.014222 2023-03-21 2023-04-03  13 days
+10     4        53       64  197.580002  189.727007  -31.411981  -0.039746 2023-03-21 2023-04-05  15 days
+11     8        61       63  207.460007  192.580002 -119.040039  -0.071725 2023-03-31 2023-04-04   4 days
+12    -1        63       85  192.580002  169.565001   23.015001   0.119509 2023-04-04 2023-05-05  31 days
+13   -12        85       95  170.059998  180.381006 -123.852100  -0.060690 2023-05-05 2023-05-19  14 days
+14     3       108      117  234.860001  254.235007   58.125018   0.082496 2023-06-08 2023-06-22  14 days
+15     4       107      117  224.570007  254.235007  118.659998   0.132097 2023-06-07 2023-06-22  15 days
+16     5       104      117  213.970001  254.235007  201.325027   0.188181 2023-06-02 2023-06-22  20 days
+17     6       101      117  201.160004  254.235007  318.450018   0.263845 2023-05-30 2023-06-22  23 days
+18     9        96      117  188.869995  254.235007  588.285104   0.346085 2023-05-22 2023-06-22  31 days
+19    11        95      117  180.139999  254.235007  815.045081   0.411319 2023-05-19 2023-06-22  34 days
+20     8       117      119  264.609985  241.050003 -188.479858  -0.089037 2023-06-22 2023-06-26   4 days
+21     1       117      120  264.609985  250.210007  -14.399979  -0.054420 2023-06-22 2023-06-27   5 days
+22    -8       120      124  250.210007  279.441991 -233.855872  -0.116830 2023-06-27 2023-07-03   6 days
+23     6       134      136  293.339996  269.582011 -142.547910  -0.080991 2023-07-18 2023-07-20   2 days
+24     8       124      136  279.820007  271.218001  -68.816052  -0.030741 2023-07-03 2023-07-20  17 days
+25    -9       136      159  262.899994  233.722003  262.601917   0.110985 2023-07-20 2023-08-22  33 days
+26   -10       159      164  233.190002  248.730991 -155.409882  -0.066645 2023-08-22 2023-08-29   7 days
+27     8       164      167  257.179993  245.009995  -97.359985  -0.047321 2023-08-29 2023-09-01   3 days
+28     8       172      181  273.579987  253.058009 -164.175818  -0.075013 2023-09-11 2023-09-22  11 days
+29     1       164      181  257.179993  253.058009   -4.121983  -0.016028 2023-08-29 2023-09-22  24 days
+30    -9       180      190  255.699997  261.985999  -56.574014  -0.024584 2023-09-21 2023-10-05  14 days
+31     9       190      199  260.049988  244.614995 -138.914937  -0.059354 2023-10-05 2023-10-18  13 days
+32    -9       199      199  242.679993  242.679993   -0.000000  -0.000000 2023-10-18 2023-10-18   0 days
+
+```
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/8da4051a-4227-4160-ae0e-da8f55cd774e)
+
+
+
+(trailing stop)
+* 본전컷
+* breakeven cut
+* 다음에 하자
+
+(Pyramiding)
+* Pyramiding
+```
+Start                     2023-01-03 00:00:00
+End                       2023-10-19 00:00:00
+Duration                    289 days 00:00:00
+Exposure Time [%]                   99.004975
+Equity Final [$]                 15593.137956
+Equity Peak [$]                  17008.005756
+Return [%]                           55.93138
+Buy & Hold Return [%]              103.617025
+Return (Ann.) [%]                   74.536717
+Volatility (Ann.) [%]               45.905176
+Sharpe Ratio                         1.623711
+Sortino Ratio                        4.849016
+Calmar Ratio                          6.13003
+Max. Drawdown [%]                  -12.159275
+Avg. Drawdown [%]                   -3.860145
+Max. Drawdown Duration      121 days 00:00:00
+Avg. Drawdown Duration       29 days 00:00:00
+# Trades                                   30
+Win Rate [%]                        56.666667
+Best Trade [%]                      67.873992
+Worst Trade [%]                    -15.096405
+Avg. Trade [%]                         9.8758
+Max. Trade Duration          63 days 00:00:00
+Avg. Trade Duration          26 days 00:00:00
+Profit Factor                        5.580942
+Expectancy [%]                      11.807113
+SQN                                  2.407418
+_strategy                              Turtle
+_equity_curve                             ...
+_trades                       Size  EntryB...
+dtype: object
+    Size  EntryBar  ExitBar  EntryPrice   ExitPrice          PnL  ReturnPct  EntryTime   ExitTime Duration
+0      3        22       40  189.979996  190.772003     2.376022   0.004169 2023-02-03 2023-03-02  27 days
+1      4        17       40  177.899994  190.772003    51.488037   0.072355 2023-01-27 2023-03-02  34 days
+2      6        16       40  160.270004  190.772003   183.011993   0.190316 2023-01-26 2023-03-02  35 days
+3      9        13       40  143.750000  190.772003   423.198029   0.327110 2023-01-23 2023-03-02  38 days
+4     12         9       40  131.490005  190.772003   711.383972   0.450848 2023-01-17 2023-03-02  44 days
+5     17         1       40  113.639999  190.772003  1311.244064   0.678740 2023-01-04 2023-03-02  57 days
+6     13        40       45  190.899994  174.977991  -206.986041  -0.083405 2023-03-02 2023-03-09   7 days
+7      8        53       64  197.580002  189.727007   -62.823962  -0.039746 2023-03-21 2023-04-05  15 days
+8     10        50       64  184.130005  189.727007    55.970016   0.030397 2023-03-16 2023-04-05  20 days
+9     14        45       64  172.919998  189.727007   235.298117   0.097195 2023-03-09 2023-04-05  27 days
+10     6        61       66  207.460007  176.141003  -187.914020  -0.150964 2023-03-31 2023-04-10  10 days
+11    13        66       74  184.509995  170.222989  -185.731073  -0.077432 2023-04-10 2023-04-20  10 days
+12     4       104      117  213.970001  254.235007   161.060022   0.188181 2023-06-02 2023-06-22  20 days
+13     5       101      117  201.160004  254.235007   265.375015   0.263845 2023-05-30 2023-06-22  23 days
+14     6        96      117  188.869995  254.235007   392.190070   0.346085 2023-05-22 2023-06-22  31 days
+15     8        95      117  180.139999  254.235007   592.760059   0.411319 2023-05-19 2023-06-22  34 days
+16    11        86      117  171.789993  254.235007   906.895148   0.479917 2023-05-08 2023-06-22  45 days
+17    15        74      117  162.990005  254.235007  1368.675018   0.559820 2023-04-20 2023-06-22  63 days
+18     7       134      136  293.339996  269.582011  -166.305894  -0.080991 2023-07-18 2023-07-20   2 days
+19     9       124      136  279.820007  271.218001   -77.418059  -0.030741 2023-07-03 2023-07-20  17 days
+20    12       117      136  264.609985  271.218001    79.296185   0.024973 2023-06-22 2023-07-20  28 days
+21    12       136      148  262.899994  246.359996  -198.479974  -0.062914 2023-07-20 2023-08-07  18 days
+22    12       148      155  251.449997  228.425999  -276.287970  -0.091565 2023-08-07 2023-08-16   9 days
+23     6       172      181  273.579987  253.058009  -123.131863  -0.075013 2023-09-11 2023-09-22  11 days
+24     7       164      181  257.179993  253.058009   -28.853883  -0.016028 2023-08-29 2023-09-22  24 days
+25    10       160      181  236.860001  253.058009   161.980087   0.068386 2023-08-23 2023-09-22  30 days
+26    13       155      181  225.600006  253.058009   356.954042   0.121711 2023-08-16 2023-09-22  37 days
+27     9       189      199  261.160004  244.614995  -148.905080  -0.063352 2023-10-04 2023-10-18  14 days
+28    12       181      199  244.880005  244.614995    -3.180121  -0.001082 2023-09-22 2023-10-18  26 days
+29    12       199      199  242.679993  242.679993     0.000000   0.000000 2023-10-18 2023-10-18   0 days
+```
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/821c24c5-66ed-4e41-9b22-8433e7014b2c)
+
+
+
+(trailing stop)
+
+
+(Detecting Price Trends in python - Higher Highs, Higher Lows)
+
+https://www.youtube.com/watch?v=v3z3FuxLzjU
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/9eb5a5fc-16a4-4315-abc3-26023269d1f0)
+
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/2fcf3890-5ee5-48b7-b63b-aea63bc949a0)
+
+
+(Live trading support )
+
+https://github.com/kernc/backtesting.py/issues/81
+
+(Stop Losses in Backtesting.py)
+* 참 대단한 사람들이 많구나 ㅠㅠ
+https://greyhoundanalytics.com/blog/stop-losses-in-backtestingpy/
+
+```
+from backtesting import Backtest
+from backtesting import Strategy
+from backtesting.test import GOOG
+from backtesting.lib import crossover
+
+class TrailingStrategy(Strategy):
+
+    __sl_amount = 6.
+
+    def init(self):
+        super().init()
+
+    def set_trailing_sl(self, sl_amount: float = 6):
+        """
+    Set the trailing stop loss as $n below the current price (for long positions)
+        Works for future bars only
+        """
+        self.__sl_amount = sl_amount
+
+    def next(self):
+        super().next()
+        # Can't use index=-1 because self.__atr is not an Indicator type
+        index = len(self.data)-1
+
+        for trade in self.trades:
+            if trade.is_long:
+                trade.sl = max(trade.sl or -np.inf,
+                               self.data.Close[index] -  self.__sl_amount)
+            else:
+                trade.sl = min(trade.sl or np.inf,
+                               self.data.Close[index] +  self.__sl_amount)
+
+```
+
+
+(adjusting SL/TP)
+https://github.com/kernc/backtesting.py/discussions/1015
+
+```
+
+       if len(self.trades) > 0:
+
+            self.trades[0].sl = self.trades[0].entry_price * 0.9
+            self.trades[0].tp = self.trades[0].entry_price * 1.1
+
+            self.trades[-1].sl = self.trades[-1].entry_price * 0.9
+            self.trades[-1].tp = self.trades[-1].entry_price * 1.1
+
+```
+
+
+
+```
+
+class MACDStrategy(Strategy):
+    
+    # Define the two EMA lags as *class variables*
+    # for later optimization
+    fast = 12
+    slow = 26
+    signal = 9
+    
+    def init(self):                
+        self.fast_macd      = self.I(MACD_Backtesting_FAST, self.data.Close, self.fast, overlay=True, name='FAST')
+        self.slow_macd      = self.I(MACD_Backtesting_SLOW, self.data.Close, self.slow, overlay=True, name='SLOW')        
+        self.macd_macd_      = MACD_Backtesting_MACD(self.fast_macd, self.slow_macd)        
+        self.signal_macd_    = MACD_Backtesting_SIGNAL(self.macd_macd_, self.signal)
+        self.histogram_macd_ = MACD_Backtesting_HISTOGRAMM(self.macd_macd_, self.signal_macd_)
+        
+        self.macd_macd, self.signal_macd, self.histogram_macd = self.I(
+            lambda: (self.macd_macd_, self.signal_macd_, self.histogram_macd_)                                    
+                , overlay=False,legends=['MACD', 'signal', 'histogramm'], histogramms=[False, False, True], scatter=False, name='MACD',)
+ ```       
+
+(SL First)
+When SL and TP are hit within the same bar, backtesting.py acts pessimistically, that is considering SL as hit first.
+SL과 TP가 동일한 막대 내에 도달하면 backtesting.py는 비관적으로 작동합니다. 즉, SL을 먼저 적중한 것으로 간주합니다.
+
+(timezone 제거)
+You can remove the time zone information of DatetimeIndex using DatetimeIndex.tz_localize() , as follows:
+
+hist.index = hist.index.tz_localize(None)
+
+
+bt = Backtest(df, Scalp_buy, cash=10000, commission=.0014, trade_on_close=True)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/39cdc5e5-edff-43bd-ae7c-433f4b82e1b6)
+
+```
+Methods
+def I
+(
+self, func, *args, name=None, plot=True, overlay=None, color=None, scatter=False, **kwargs)
+Declare indicator. An indicator is just an array of values, but one that is revealed gradually in Strategy.next() much like Strategy.data is. Returns np.ndarray of indicator values.
+
+func is a function that returns the indicator array(s) of same length as Strategy.data.
+
+In the plot legend, the indicator is labeled with function name, unless name overrides it.
+
+If plot is True, the indicator is plotted on the resulting Backtest.plot().
+
+If overlay is True, the indicator is plotted overlaying the price candlestick chart (suitable e.g. for moving averages). If False, the indicator is plotted standalone below the candlestick chart. By default, a heuristic is used which decides correctly most of the time.
+
+color can be string hex RGB triplet or X11 color name. By default, the next available color is assigned.
+
+If scatter is True, the plotted indicator marker will be a circle instead of a connected line segment (default).
+
+Additional *args and **kwargs are passed to func and can be used for parameters.
+
+For example, using simple moving average function from TA-Lib:
+
+```
+
+
+[231020]
+* 날짜
+* position close
+* 10일선 sl 표시, 
+* sl 변경하기
+* supertrend
+* 거래량
+* 횡보구간
+
+
+Close portion of position by closing portion of each active trade. See Trade.close().
+
 [231016]
 
 
