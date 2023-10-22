@@ -141,6 +141,81 @@ df.to_excel('data_2310040045.xlsx')
 
 #df.to_excel('data_2310040134.xlsx')
 
-df = pd.read_excel('data_2310040134_2.xlsx')
+#df = pd.read_excel('data_2310040134_2.xlsx')
+
+"""
+tickers = ["NQ=F", "ES=F"]
+
+#appl = yf.Ticker("APPL")
+#hist = appl.history(start="2023-09-01", end="2023-09-25", interval='1h')
+
+yfObj = yf.Tickers(tickers)
+#df = yfObj.history(start=self.start, end=self.end, interval='1h', back_adjust=True, auto_adjust=True, prepost=True)
+df_1m = yfObj.history(start="2023-09-20", end="2023-09-25", interval='1m')
+df_2m = yfObj.history(start="2023-09-20", end="2023-09-25", interval='2m')
+df_5m = yfObj.history(start="2023-09-20", end="2023-09-25", interval='5m')
+df_15m = yfObj.history(start="2023-09-20", end="2023-09-25", interval='15m')
+df_30m = yfObj.history(start="2023-09-20", end="2023-09-25", interval='30m')
+df_60m = yfObj.history(start="2023-09-20", end="2023-09-25", interval='60m')
+df_90m = yfObj.history(start="2023-09-20", end="2023-09-25", interval='90m')
+df_1h = yfObj.history(start="2023-09-20", end="2023-09-25", interval='1h')
+df_1d = yfObj.history(start="2023-09-20", end="2023-09-25", interval='1d')
+df_5d = yfObj.history(start="2023-09-20", end="2023-09-25", interval='5d')
+df_1wk = yfObj.history(start="2023-01-20", end="2023-09-25", interval='1wk')
+df_1mo = yfObj.history(start="2023-01-20", end="2023-09-25", interval='1mo')
+df_3mo = yfObj.history(start="2023-01-20", end="2023-09-25", interval='3mo')
+#df_1y = yfObj.history(start="2020-09-20", end="2023-09-25", interval='1y')
+
+#df = yfObj.history(start="2023-09-01", end="2023-09-25", interval='5m')
+#df.drop(['Capital Gains', 'Open', 'Dividends', 'Stock Splits', 'Volume'], inplace=True, axis=1)
+#df.drop(['Open', 'Dividends', 'Stock Splits', 'Volume'], inplace=True, axis=1)
+#df.ffill(inplace=True)
+#df = df.swaplevel(axis=1)
+
+#df.to_excel('data6.xlsx')
+
+"""
+
+
+#tickers = ["NQ=F", "ES=F"]
+"""
+appl = yf.Ticker("APPL")
+#hist = appl.history(start="2023-09-01", end="2023-09-25", interval='1h')
+
+yfObj = yf.Tickers(tickers)
+#df = yfObj.history(start=self.start, end=self.end, interval='1h', back_adjust=True, auto_adjust=True, prepost=True)
+df_1m = yfObj.history(interval='1m')
+df_2m = yfObj.history(interval='2m')
+df_5m = yfObj.history(interval='5m')
+df_15m = yfObj.history(interval='15m')
+df_30m = yfObj.history(interval='30m')
+df_60m = yfObj.history(interval='60m')
+df_90m = yfObj.history(interval='90m')
+df_1h = yfObj.history(interval='1h')
+df_1d = yfObj.history(interval='1d')
+df_5d = yfObj.history(interval='5d')
+df_1wk = yfObj.history(interval='1wk')
+df_1mo = yfObj.history(interval='1mo')
+df_3mo = yfObj.history(interval='3mo')
+#df_1y = yfObj.history(start="2020-09-20", end="2023-09-25", interval='1y')
+
+#df = yfObj.history(start="2023-09-01", end="2023-09-25", interval='5m')
+#df.drop(['Capital Gains', 'Open', 'Dividends', 'Stock Splits', 'Volume'], inplace=True, axis=1)
+#df.drop(['Open', 'Dividends', 'Stock Splits', 'Volume'], inplace=True, axis=1)
+#df.ffill(inplace=True)
+#df = df.swaplevel(axis=1)
+
+#df.to_excel('data6.xlsx')
+"""
+
+
+tickers = ["AAPL", "MSFT"]
+
+#appl = yf.Ticker("AAPL")
+#df_1d = appl.history(interval='1h')
+
+yfObj = yf.Tickers(tickers)
+df_1d = yfObj.history(start="2000-01-01", end="2023-09-25", interval='1d')
+df_1d.to_excel('AAPL_data6.xlsx')
 
 print("나는 25년 12월 31일 은퇴했다")

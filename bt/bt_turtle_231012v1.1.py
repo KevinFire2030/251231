@@ -2,7 +2,7 @@ import pandas as pd
 import numpy as np
 import yfinance as yf
 from backtesting import Backtest, Strategy
-import pandas_ta as ta
+
 
 sys1_entry = 20
 sys1_exit = 10
@@ -41,18 +41,8 @@ class Turtle(Strategy):
     def init(self):
 
         super().init()
-
-        df = pd.DataFrame()
-        df['high'] = pd.Series(self.data.High)
-        df['low'] = pd.Series(self.data.Low)
-        df['close'] = pd.Series(self.data.Close)
-        st = ta.supertrend(df['high'], df['low'], df['close'], 10, 2)
-
-        self.sma10 = self.I(ta.sma, pd.Series(self.data.Close), 10)
-        self.hma10 = self.I(ta.hma, pd.Series(self.data.Close), 10)
-        self.st_long = self.I(st['SUPERTl_10_2.0'])
-        #self.st = self.I(ta.supertrend, pd.Series(self.data.High),pd.Series(self.data.Low), pd.Series(self.data.Close), 10, 2)
-
+        self.entry_N = 0
+        self.unit_size = 0
 
         pass
 
@@ -75,61 +65,89 @@ class Turtle(Strategy):
 
         N = self.data.N[-1]
 
+        #size = (self.equity * r_max) // N
+        unit = np.floor((self.equity * r_max) // (5 * N) )
 
+        unit = self._check_cash_balance(unit, price)
+
+        #unit = 70
 
 
         if len(self.trades) > 0:
 
-            # Exit
+            """
+            #Exit
             if self.trades[-1].is_long and (price == S1_ExL or price <= self.trades[-1].sl):
-
-                for i in reversed(range(0, len(self.trades))):
-                    self.trades[i].close()
-
-                return
+                self.trades[-1].close()
 
             elif self.trades[-1].is_short and (price == S1_ExS or price >= self.trades[-1].sl):
-                for i in reversed(range(0, len(self.trades))):
-                    self.trades[i].close()
-
-                return
+                self.trades[-1].close()
+            """
 
             # Pyramid
-            if self.trades[-1].is_long and (price >= self.trades[-1].entry_price + N) and (len(self.trades) < 6):
+            if self.trades[-1].is_long and (price >= self.trades[-1].entry_price + self.entry_N):
 
+
+                tp = price + 4 * N
                 sl = price - 2 * N
-                self.buy(sl=sl, size=0.2)
 
-                print("Long Pyramiding")
+                self.entry_N = N
+                self.unit_size += 1
+                # self.buy(sl=sl,size=size)
+                self.buy(sl=sl, tp=tp, size=unit)
 
-            elif self.trades[-1].is_short and (price <= self.trades[-1].entry_price - N) and (len(self.trades) < 6):
 
-                sl = price + 2 * N
-                self.sell(sl=sl, size=0.2)
+                #self.trades[-1].size = self.trades[-1].size + unit
 
-                print("Short Pyramiding")
+                print("불타기")
 
+            pass
+
+        """
+        if len(self.trades) > 0:
+
+            if self.trades[-1].is_long:
+                self.trades[-1].tp = S1_ExL
+
+            elif self.trades[-1].is_short:
+                self.trades[-1].tp = S1_ExL
+
+            pass
+        """
 
         if len(self.trades) == 0:
 
             # Buy on breakout
             if price == S1_EL:
+
+                tp = price + 4 * N
                 sl = price - 2 * N
-                self.buy(sl=sl, size=0.2)
+
+                self.entry_N = N
+                #self.buy(sl=sl,size=size)
+                self.unit_size += 1
+                self.buy(sl=sl, tp=tp, size=unit)
+                #self.buy(sl=sl, size=unit)
+
 
             # Sell short
             elif price == S1_ES:
+
+                tp = price - 4 * N
                 sl = price + 2 * N
-                self.sell(sl=sl, size=0.2)
+
+                self.entry_N = N
+                self.unit_size += 1
+
+                self.sell(sl=sl,tp=tp, size=unit)
+                #self.sell(sl=sl, size=unit)
 
 
 
-#ticker = yf.Ticker("ES=F")
-ticker = yf.Ticker("MSFT")
-
-#ohlcv = ticker.history(interval='1d')
-
-ohlcv = ticker.history(start="2023-01-01", end="2023-10-20")
+ticker = yf.Ticker("AAPL")
+start_date = "2020-01-01"
+end_date = "2023-10-09"
+ohlcv = ticker.history(start=start_date, end=end_date)
 
 ohlcv = calc_breakouts(ohlcv, sys1_entry, sys1_exit)
 

@@ -36,6 +36,11 @@ def calc_N(data, atr_periods):
 
     return data
 
+def SUPERTl(df):
+    return df['SUPERTl_20_2.0']
+def SUPERTs(df):
+    return df['SUPERTs_20_2.0']
+
 class Turtle(Strategy):
 
     def init(self):
@@ -46,11 +51,21 @@ class Turtle(Strategy):
         df['high'] = pd.Series(self.data.High)
         df['low'] = pd.Series(self.data.Low)
         df['close'] = pd.Series(self.data.Close)
-        st = ta.supertrend(df['high'], df['low'], df['close'], 10, 2)
+        st = ta.supertrend(df['high'], df['low'], df['close'], 20, 2)
 
+        df['hma10_c'] = ta.hma(df['close'], 10)
+        df['hma10_h'] = ta.hma(df['high'], 10)
+        df['hma10_l'] = ta.hma(df['low'], 10)
+        df['hma10_diff'] = df['hma10_c'].diff()
+        df['hma_atr'] = ta.atr(df['hma10_h'], df['hma10_l'], df['hma10_c'], 10)
+
+        #self.sma5 = self.I(ta.sma, pd.Series(self.data.Close), 5)
         self.sma10 = self.I(ta.sma, pd.Series(self.data.Close), 10)
-        self.hma10 = self.I(ta.hma, pd.Series(self.data.Close), 10)
-        self.st_long = self.I(st['SUPERTl_10_2.0'])
+        #self.hma10 = self.I(ta.hma, pd.Series(self.data.Close), 10)
+        #self.hma20 = self.I(ta.hma, pd.Series(self.data.Close), 20)
+        self.st_short = self.I(SUPERTs, st)
+        self.st_long = self.I(SUPERTl, st)
+
         #self.st = self.I(ta.supertrend, pd.Series(self.data.High),pd.Series(self.data.Low), pd.Series(self.data.Close), 10, 2)
 
 
@@ -80,19 +95,30 @@ class Turtle(Strategy):
 
         if len(self.trades) > 0:
 
+            self.trades[0].sl = self.trades[0].entry_price * 0.9
+            self.trades[0].tp = self.trades[0].entry_price * 1.1
+
+            self.trades[-1].sl = self.trades[-1].entry_price * 0.9
+            self.trades[-1].tp = self.trades[-1].entry_price * 1.1
+
             # Exit
             if self.trades[-1].is_long and (price == S1_ExL or price <= self.trades[-1].sl):
 
+                """
                 for i in reversed(range(0, len(self.trades))):
                     self.trades[i].close()
+                """
 
-                return
+                self.position.close()
 
             elif self.trades[-1].is_short and (price == S1_ExS or price >= self.trades[-1].sl):
+
+                """
                 for i in reversed(range(0, len(self.trades))):
                     self.trades[i].close()
+                """
 
-                return
+                self.position.close()
 
             # Pyramid
             if self.trades[-1].is_long and (price >= self.trades[-1].entry_price + N) and (len(self.trades) < 6):
@@ -125,8 +151,10 @@ class Turtle(Strategy):
 
 
 #ticker = yf.Ticker("ES=F")
-ticker = yf.Ticker("MSFT")
-
+#ticker = yf.Ticker("MSFT")
+#ticker = yf.Ticker("AAPL")
+#ticker = yf.Ticker("AMZN")
+ticker = yf.Ticker("TSLA")
 #ohlcv = ticker.history(interval='1d')
 
 ohlcv = ticker.history(start="2023-01-01", end="2023-10-20")

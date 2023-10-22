@@ -82,6 +82,7 @@ class Turtle(Strategy):
             """
 
             # Pyramid
+            #if self.trades[-1].is_long and (price == self.trades[-1].
 
             pass
 
