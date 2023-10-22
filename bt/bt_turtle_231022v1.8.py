@@ -4,7 +4,7 @@ import yfinance as yf
 from backtesting import Backtest, Strategy
 #from backtesting.lib import TrailingStrategy
 import pandas_ta as ta
-
+from scipy.signal import find_peaks
 
 def HMA10(df):
     return df['hma10']
@@ -54,8 +54,11 @@ class TrailingStrategy(Strategy):
 
     def next(self):
         super().next()
+
+
         # Can't use index=-1 because self.__atr is not an Indicator type
         index = len(self.data)-1
+        """
         for trade in self.trades:
             if trade.is_long:
                 trade.sl = max(trade.sl or -np.inf,
@@ -64,6 +67,7 @@ class TrailingStrategy(Strategy):
             else:
                 trade.sl = min(trade.sl or np.inf,
                                self.data.Close[index] + self.__atr[index] * self.__n_atr)
+        """
 
         if self.position:
             if self.trades[-1].is_long:
@@ -86,17 +90,25 @@ class Turtle(TrailingStrategy):
 
         self.hma10 = self.I(HMA10, self.data)
         self.hma20 = self.I(HMA20, self.data)
-        self.hma60 = self.I(HMA60, self.data)
+        #self.hma60 = self.I(HMA60, self.data)
 
         pass
 
     def next(self):
         super().next()
 
-        if self.position:
-            pass
-        else:
-            self.buy(size = 0.2)
+
+        diff = self.data.hma10_diff[-1]
+        shift = self.data.hma10_diff[-2]
+        is_peak = diff * shift
+
+        if is_peak < 0 and diff < 0:
+            self.position.close()
+            self.sell(size = 0.2)
+
+        elif is_peak < 0 and diff > 0:
+            self.position.close()
+            self.buy(size=0.2)
 
 
 ticker = yf.Ticker("TSLA")
@@ -106,10 +118,17 @@ ohlcv = ticker.history(start="2023-01-01", end="2023-10-20")
 ohlcv.index = ohlcv.index.tz_localize(None)
 
 
+ohlcv['atr'] = ta.atr(ohlcv['High'], ohlcv['Low'], ohlcv['Close'], 10)
 ohlcv['hma10'] = ta.hma(ohlcv['Close'], 10)
 ohlcv['hma20'] = ta.hma(ohlcv['Close'], 20)
-ohlcv['hma60'] = ta.hma(ohlcv['Close'], 60)
+#ohlcv['hma60'] = ta.hma(ohlcv['Close'], 60)
 
+ohlcv['hma10_diff'] = ohlcv['hma10'].diff()
+
+peak = np.where(ohlcv['hma10_diff'] * ohlcv['hma10_diff'].shift() < 0)
+
+atr = ohlcv.atr.iloc[-1]
+peak_idx, _ = find_peaks(ohlcv.Close, distance = 15, width = 3, prominence = atr)
 
 bt = Backtest(ohlcv, Turtle, cash=10000, commission=.000, trade_on_close=True)
 stats = bt.run()
