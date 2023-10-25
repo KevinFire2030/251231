@@ -6,6 +6,21 @@
 (find_peaks와 breakouts, 그리고 ATR)
 
 ```
+df['atr'] = ta.atr(df['High'], df['Low'], df['Close'], 20)
+df['hma10'] = ta.hma(df['Close'], 20)
+
+df['S1_EL'] = df['Close'].rolling(20).max()
+df['S1_ES'] = df['Close'].rolling(20).min()
+
+
+```
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/21fa51e0-6ca3-4d33-ac11-e7fba32fd574)
+
+
+
+```
 ax.vlines(df.index[peaks_idx], ymin=df.hma10.iloc[peaks_idx]-df.atr.iloc[peaks_idx], ymax=df.hma10.iloc[peaks_idx], color="C1")
 ax.vlines(df.index[troughs_idx], ymax=df.hma10.iloc[troughs_idx]+df.atr.iloc[troughs_idx], ymin=df.hma10.iloc[troughs_idx], color="C1")
 ```
