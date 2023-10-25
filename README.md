@@ -1,3 +1,41 @@
+[231026]
+* 퓨쳐셀프, 25년 12월 31일 나는 자산10억과 월500 버는 시스템을 갖추고 은퇴(Fire)했다
+* 다시보자 터틀 트래이딩
+* find_peaks()와 횡보구간 피하기
+
+(find_peaks와 breakouts, 그리고 ATR)
+
+```
+ax.vlines(df.index[peaks_idx], ymin=df.hma10.iloc[peaks_idx]-df.atr.iloc[peaks_idx], ymax=df.hma10.iloc[peaks_idx], color="C1")
+ax.vlines(df.index[troughs_idx], ymax=df.hma10.iloc[troughs_idx]+df.atr.iloc[troughs_idx], ymin=df.hma10.iloc[troughs_idx], color="C1")
+```
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/aee266a5-5052-42d7-9579-00932315ef48)
+
+
+(find_peaks와 breakouts)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/16545958-a631-48e1-b295-be7c9806e25e)
+
+
+(find_peaks)
+
+ticker = yf.Ticker("TSLA")
+ohlcv = ticker.history(start="2023-01-01", end="2023-10-26")
+
+peaks_idx, _ = find_peaks (df.hma10)
+troughs_idx, _ = find_peaks (-1*df.hma10)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/55a15984-8c35-437a-abac-f6493a8ab655)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/43c5f1b3-2a17-46cf-97fd-d837406de77f)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/4daa956d-5660-4f60-83db-4027829185e7)
+
+
+
 [231023]
 * 본전컷
 * hma, 변곡점 매매, 10일 vs 20일
