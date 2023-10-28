@@ -6,9 +6,49 @@ https://www.youtube.com/watch?v=ly5SR3um35w
 
 ![image](https://github.com/KevinFire2030/251231/assets/109524169/93a7846e-497e-434d-ad7d-da5ac55d6e81)
 
+```
+[진입 조건]
+*이동평균선 EMA 3개, 손익비와 승률
+*자금과 리스크 관리(중요)로 스윙 트레이딩
+
+1. 리스크 관리!
+– 투자금은 전체 자산의 10 ~ 20%
+– 손절폭은 전체 자산의 0.5% ~ 1.5%
+
+2. 진입 시점!
+– 상승 혹은 하락 후 이평선 눌림 후 발산 시점
+– 이동평균선 10 / 20 / 50일선이 완전 정배열 혹은 완전 역배열을 이룰 때
+– 눌림목 조정의 박스권을 돌파하는 시점
+
+ 
+
+[손절 조건]
+1. 진입 후 반대 캔들 발생시, 1/2 손절
+(Ex. 상승 추세일 경우, 첫 음봉 발생시 1/2 손절 혹은 익절)
+
+2. 진입 캔들 돌파시 전량 손절
+
+ 
+
+[익절 조건]
+1. 진입 후 반대 캔들 발생시, 1/2 익절
+
+2. 10일선이 20일선 돌파시 전량 익절
+
+ 
+
+참조 : https://www.youtube.com/watch?v=hHA8_aa55mY
+
+```
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/10295968-e0f9-4364-97e6-ba8e2a774351)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/4e0bb9d2-8683-4851-be3a-6f143d627a45)
 
 
+![image](https://github.com/KevinFire2030/251231/assets/109524169/72104b88-74a4-4775-bdad-036254003b68)
 
+![image](https://github.com/KevinFire2030/251231/assets/109524169/0f0817f5-0879-43d9-a6eb-b53ead1423e3)
 
 
 [231026]
