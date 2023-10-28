@@ -1,6 +1,9 @@
 [231028]
 * 쿠리마쿠, 10/20/50 EMA, 눌림목 매매
 
+(Volatility Contraction Pattern python)
+https://github.com/clairetsoi1129/stock-screener
+
 
 https://www.youtube.com/watch?v=WswZwmr2ebU&t=673s
 
