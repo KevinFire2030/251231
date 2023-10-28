@@ -2,6 +2,11 @@
 * 쿠리마쿠, 10/20/50 EMA, 눌림목 매매
 
 
+https://www.youtube.com/watch?v=WswZwmr2ebU&t=673s
+
+https://valuefund.substack.com/p/how-does-one-trader-turn-9100-into
+
+
 https://www.youtube.com/watch?v=ly5SR3um35w
 
 ![image](https://github.com/KevinFire2030/251231/assets/109524169/93a7846e-497e-434d-ad7d-da5ac55d6e81)
