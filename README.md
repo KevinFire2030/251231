@@ -50,6 +50,18 @@ https://www.youtube.com/watch?v=ly5SR3um35w
 
 ![image](https://github.com/KevinFire2030/251231/assets/109524169/0f0817f5-0879-43d9-a6eb-b53ead1423e3)
 
+![image](https://github.com/KevinFire2030/251231/assets/109524169/a76f14cd-6d79-415f-aea0-fcbb69ce3bb6)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/e2b9eeea-cd26-4ddc-8171-62f933f74bad)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/80057d60-5ef3-4475-acd1-66c446be6118)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/25bc5d6d-32c6-4fc8-9073-a964c92232df)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/0bcfb2b6-286f-4ea0-94fd-88a76a26a203)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/d44a138f-5944-451e-a826-3a0d88c09044)
+
 
 [231026]
 * 퓨쳐셀프, 25년 12월 31일 나는 자산10억과 월500 버는 시스템을 갖추고 은퇴(Fire)했다
