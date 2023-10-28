@@ -1,3 +1,16 @@
+[231028]
+* 쿠리마쿠, 10/20/50 EMA, 눌림목 매매
+
+
+https://www.youtube.com/watch?v=ly5SR3um35w
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/93a7846e-497e-434d-ad7d-da5ac55d6e81)
+
+
+
+
+
+
 [231026]
 * 퓨쳐셀프, 25년 12월 31일 나는 자산10억과 월500 버는 시스템을 갖추고 은퇴(Fire)했다
 * 다시보자 터틀 트래이딩
