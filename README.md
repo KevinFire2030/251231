@@ -1,3 +1,7 @@
+[231031]
+* https://github.com/stockalgo/stolgo
+
+
 [231028]
 * 쿠리마쿠, 10/20/50 EMA, 눌림목 매매
 
