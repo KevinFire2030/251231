@@ -1,3 +1,11 @@
+[231111]
+* 120틱, 10분
+* 다시보자 turtle, 손익비와 승률
+* fire2025 세팅
+* 키움 주식, 선물
+
+
+
 [231031]
 * https://github.com/stockalgo/stolgo
 
