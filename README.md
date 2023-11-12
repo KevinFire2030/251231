@@ -1,3 +1,13 @@
+[231113]
+
+```
+== on_receive_tr_data ==
+선물틱차트연속조회
+[선물틱연속차트조회] 1000
+last_tick_count:  120
+Failed login
+```
+
 [231111]
 * 120틱, 10분
 * 다시보자 turtle, 손익비와 승률
