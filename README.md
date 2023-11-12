@@ -1,3 +1,105 @@
+[231113]
+
+```
+== on_receive_tr_data ==
+선물틱차트연속조회
+[선물틱연속차트조회] 1000
+last_tick_count:  120
+Failed login
+```
+
+[231111]
+* 120틱, 10분
+* 다시보자 turtle, 손익비와 승률
+* fire2025 세팅
+* 키움 모투, 주식, 선물
+* 데이터, 전처리, 매매
+
+
+□ 연장전
+
+□ 후반전
+* 251231 PRJ 목표 일정
+* fire2025 세팅, 아나콘다 삭제/재설치, 파이참 재설치, 메모리 업그레이드
+* 키움 코스피200 선물 120틱 받기, 터틀 백테스트, 나스닥100 선물, 
+
+[231031]
+* https://github.com/stockalgo/stolgo
+
+
+[231028]
+* 쿠리마쿠, 10/20/50 EMA, 눌림목 매매
+
+(Volatility Contraction Pattern python)
+https://github.com/clairetsoi1129/stock-screener
+
+
+https://www.youtube.com/watch?v=WswZwmr2ebU&t=673s
+
+https://valuefund.substack.com/p/how-does-one-trader-turn-9100-into
+
+
+https://www.youtube.com/watch?v=ly5SR3um35w
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/93a7846e-497e-434d-ad7d-da5ac55d6e81)
+
+```
+[진입 조건]
+*이동평균선 EMA 3개, 손익비와 승률
+*자금과 리스크 관리(중요)로 스윙 트레이딩
+
+1. 리스크 관리!
+– 투자금은 전체 자산의 10 ~ 20%
+– 손절폭은 전체 자산의 0.5% ~ 1.5%
+
+2. 진입 시점!
+– 상승 혹은 하락 후 이평선 눌림 후 발산 시점
+– 이동평균선 10 / 20 / 50일선이 완전 정배열 혹은 완전 역배열을 이룰 때
+– 눌림목 조정의 박스권을 돌파하는 시점
+
+ 
+
+[손절 조건]
+1. 진입 후 반대 캔들 발생시, 1/2 손절
+(Ex. 상승 추세일 경우, 첫 음봉 발생시 1/2 손절 혹은 익절)
+
+2. 진입 캔들 돌파시 전량 손절
+
+ 
+
+[익절 조건]
+1. 진입 후 반대 캔들 발생시, 1/2 익절
+
+2. 10일선이 20일선 돌파시 전량 익절
+
+ 
+
+참조 : https://www.youtube.com/watch?v=hHA8_aa55mY
+
+```
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/10295968-e0f9-4364-97e6-ba8e2a774351)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/4e0bb9d2-8683-4851-be3a-6f143d627a45)
+
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/72104b88-74a4-4775-bdad-036254003b68)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/0f0817f5-0879-43d9-a6eb-b53ead1423e3)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/a76f14cd-6d79-415f-aea0-fcbb69ce3bb6)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/e2b9eeea-cd26-4ddc-8171-62f933f74bad)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/80057d60-5ef3-4475-acd1-66c446be6118)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/25bc5d6d-32c6-4fc8-9073-a964c92232df)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/0bcfb2b6-286f-4ea0-94fd-88a76a26a203)
+
+![image](https://github.com/KevinFire2030/251231/assets/109524169/d44a138f-5944-451e-a826-3a0d88c09044)
+
+
 [231026]
 * 퓨쳐셀프, 25년 12월 31일 나는 자산10억과 월500 버는 시스템을 갖추고 은퇴(Fire)했다
 * 다시보자 터틀 트래이딩
