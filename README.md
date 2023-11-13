@@ -1,3 +1,35 @@
+[231114]
+
+```
+NQ_5min
+
+Start                                     0.0
+End                                 1035421.0
+Duration                            1035421.0
+Exposure Time [%]                   36.600729
+Equity Final [$]                    15510.575
+Equity Peak [$]                       20158.1
+Return [%]                         -22.447125
+Buy & Hold Return [%]              591.087069
+Return (Ann.) [%]                         0.0
+Volatility (Ann.) [%]                     NaN
+Sharpe Ratio                              NaN
+Sortino Ratio                             NaN
+Calmar Ratio                              0.0
+Max. Drawdown [%]                  -23.199731
+Avg. Drawdown [%]                   -2.427642
+Max. Drawdown Duration              1033999.0
+Avg. Drawdown Duration               103539.5
+# Trades                              52189.0
+Win Rate [%]                        34.076146
+Best Trade [%]                       7.331093
+Worst Trade [%]                     -4.759222
+Avg. Trade [%]                      -0.003578
+Max. Trade Duration                     111.0
+```
+
+
+
 [231113]
 
 ```
