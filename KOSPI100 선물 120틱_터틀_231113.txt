@@ -1,0 +1,33 @@
+```
+tart                                     0.0
+End                                  445060.0
+Duration                             445060.0
+Exposure Time [%]                   84.594022
+Equity Final [$]                    22170.935
+Equity Peak [$]                      22285.88
+Return [%]                          121.70935
+Buy & Hold Return [%]                5.559168
+Return (Ann.) [%]                         0.0
+Volatility (Ann.) [%]                     NaN
+Sharpe Ratio                              NaN
+Sortino Ratio                             NaN
+Calmar Ratio                              0.0
+Max. Drawdown [%]                    -0.60996
+Avg. Drawdown [%]                   -0.062391
+Max. Drawdown Duration                 4381.0
+Avg. Drawdown Duration             109.580822
+# Trades                              60633.0
+Win Rate [%]                        44.861709
+Best Trade [%]                       1.805176
+Worst Trade [%]                     -0.462273
+Avg. Trade [%]                       0.005425
+Max. Trade Duration                      67.0
+Avg. Trade Duration                 13.044283
+Profit Factor                        1.198604
+Expectancy [%]                       0.005457
+SQN                                 22.933217
+_strategy                              Turtle
+_equity_curve                        Equit...
+_trades                          Size  Ent...
+dtype: object
+```
