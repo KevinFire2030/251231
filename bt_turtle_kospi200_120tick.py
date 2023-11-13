@@ -158,8 +158,8 @@ ohlcv = ticker.history(start="2023-01-01", end="2023-10-20")
 ohlcv.index = ohlcv.index.tz_localize(None)
 """
 
-df = pd.read_csv('ticks.csv')
-#df = df[0:780]
+df = pd.read_csv('ticks_231113.csv')
+df = df[0:912]
 df.sort_index(ascending=False, inplace=True)
 df.reset_index(drop=True, inplace=True)
 
@@ -176,7 +176,7 @@ print(stats)
 
 #print(stats['_trades'].to_string())
 
-stats['_trades'].to_excel('trades.xlsx')
+stats['_trades'].to_excel('trades_231113.xlsx')
 
 bt.plot()
 
