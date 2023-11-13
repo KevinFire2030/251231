@@ -1,5 +1,31 @@
 [231114]
 
+
+```
+231113 코스피200 선물
+Start                                     0.0
+End                                     892.0
+Duration                                892.0
+Exposure Time [%]                   75.587906
+Equity Final [$]                     10008.83
+Equity Peak [$]                      10015.54
+Return [%]                             0.0883
+Buy & Hold Return [%]               -0.853919
+Return (Ann.) [%]                         0.0
+Volatility (Ann.) [%]                     NaN
+Sharpe Ratio                              NaN
+Sortino Ratio                             NaN
+Calmar Ratio                              0.0
+Max. Drawdown [%]                   -0.164291
+Avg. Drawdown [%]                   -0.039302
+Max. Drawdown Duration                  656.0
+Avg. Drawdown Duration                   87.9
+# Trades                                116.0
+Win Rate [%]                        38.793103
+Best Trade [%]                       0.311641
+
+```
+
 ```
 NQ_5min
 
