@@ -176,6 +176,8 @@ print(stats)
 
 #print(stats['_trades'].to_string())
 
+stats['_trades'].to_excel('trades.xlsx')
+
 bt.plot()
 
 print("나는 2025년 12월 31일 10억 자산과 월500만원 버는 시스템을 갖추고 은퇴했다")
