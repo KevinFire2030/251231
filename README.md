@@ -1,5 +1,5 @@
 [231114]
-
+```
 		Size	EntryBar	ExitBar	EntryPrice	ExitPrice	PnL	ReturnPct	EntryTime	ExitTime	Duration
 0	6	-6	1	4	327.85	327.98	-0.78	-0.000396523	1	4	3
 1	4	-4	2	12	327.7	328.13	-1.72	-0.001312176	2	12	10
@@ -123,8 +123,8 @@
 							2207500				
 				325	250000	74425000	0.00003	2232.75	1187823	118782.3	
 						39594100000					
-![Uploading image.png…]()
 
+```
 
 ```
 231113 코스피200 선물
